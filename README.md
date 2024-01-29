@@ -13,5 +13,16 @@ source env/bin/activate
 
 # Starting the app
 ```bash
-python src/app.py
+python3 src/app.py
+```
+
+
+# envs
+
+https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/
+
+```python
+source .venv/bin/activate
+python3 -m pip install -r requirements.txt
+python3 src/app.py
 ```

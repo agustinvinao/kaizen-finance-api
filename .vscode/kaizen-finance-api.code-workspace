@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"python.pythonPath": "${workspaceFolder}/.venv/bin/python3",
+		"python.venvPath": "${workspaceFolder}/.venv/bin/python3",
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Kaizen Finance API",
+				"type": "python",
+				"request": "launch",
+				"program": "${workspaceFolder}/src/master.py",
+				"python": "${workspaceFolder}/.venv/bin/python",
+				"console": "integratedTerminal",
+				"justMyCode": true
+			}
+
+		]
+	}
+}
