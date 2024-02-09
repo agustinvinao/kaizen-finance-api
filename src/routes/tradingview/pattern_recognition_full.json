@@ -1,0 +1,707 @@
+{
+  "CDL2CROWS": {
+    "name": "Two Crows",
+    "candle_count": 3,
+    "quantshare": {
+      "pattern": "Reversal",
+      "reliability": "Medium",
+      "description": "Two Crows, The Two Crows Pattern is a 3-day pattern.",
+      "bearish": ["During an uptrend we see the market closing lower after an opening gap. Then we see a black day that fills the gap creating the Bearish Two Crows Pattern. It suggests the erosion of the uptrend, and warns about a possible trend reversal."],
+      "bullish": [],
+      "link": "https://www.quantshare.com/index.php?option=manual&dir=/QuantShare%20Language/Candlestick%20Pattern/Cdl2crows%201.html#:~:text=Cdl2crows(%20ARRAY%20open%2C%20ARRAY%20high,%2C%20ARRAY%20low%2C%20ARRAY%20close)&text=Two%20Crows%2C%20The%20Two%20Crows,is%20a%203%2Dday%20pattern.&text=During%20an%20uptrend%20we%20see,the%20Bearish%20Two%20Crows%20Pattern."
+    },
+    "investopedia": {
+      "description": ["The upside gap two crows pattern is a three-day candlestick chart formation that signals an upward price move may be running out of momentum and could reverse lower. Since the pattern involves three specific candles in a certain order, the pattern is not very common."],
+      "understanding": {
+        "image": "",
+        "details": [
+          "candle_1": "A bullish candle that continues the uptrend, represented by a long white (or green) candlestick that indicates a closing price well above the open price.",
+          "candle_2": "A bearish candle despite the security gapping higher at the open. Therefore, this candle gaps up from the prior candle, and is black with a close below the open.",
+          "candle_3": "A second bearish candle. The candle opens higher than the Candle 2 open, and closes below the Candle 2 close but above the Candle 1 close. This is visually represented by a bigger down candle that 'engulfs' Candle 2."
+        ]
+      },
+      "link": "https://www.investopedia.com/terms/u/upside-gap-two-crows.asp",
+      "images": [
+        {
+          "src": "https://www.investopedia.com/thmb/lSNLph40YjyDmSYqzCvzwfGf-hU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/upsidegaptwocrows-7370bf6958614c7285cdec245b0a68c1.jpg",
+          "description": [
+            "A trader could use the pattern to signal an exit for long positions, exiting near the close of the third candle, or going short at that time. Alternatively the trader could wait for confirmation, exiting once the price drops below the low of the third candle in the pattern. The price gapped down after the pattern, so the following open would have provided the next exit (or short entry).",
+            "Just prior to the upside gap two crows pattern, there is a chart formation that looks very similar. It is not valid because the second candle closes inside the price area of the first candle (green), and the third candle doesn't open above the second."
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "The upside gap two crows is a three-candle pattern that signals a slowing of momentum in an uptrend, which could forewarn of a reversal lower.",
+        "The pattern occurs in an uptrend, starting with a large up candle, a gap higher into a down candle, and then a larger down candle that engulfs the prior.",
+        "A reversal lower is not assured. The price could move sideways or rally after the pattern.",
+        "Some traders await 'confirmation' before acting. This means waiting for the price to drop below the low of the third candle before selling or shorting."
+      ],
+      "understanding": {
+        
+      }
+    }
+  },
+  "CDL3BLACKCROWS": {
+    "candle_count": 3,
+    "quantshare": {
+      "pattern": "reversal",
+      "reliability": "high",
+      "description": "Three Black Crows, The Three Black Crows got their name from the resemblance of three crows looking down from their perch from a tree.",
+      "bearish": ["Three long black days with each successive open being within the body of the previous day and each successive close being below the previous day's and near the day's low."],
+      "bullish": [],
+      "link": "https://www.quantshare.com/index.php?option=manual&dir=/QuantShare%20Language/Candlestick%20Pattern/Cdl3blackcrows%201.html"
+    },
+    "investopedia": {
+      "description": [
+        "Three black crows is a phrase used to describe a bearish candlestick pattern that may predict the reversal of an uptrend. Candlestick charts show the day's opening, high, low, and closing prices for a particular security. For stocks moving higher, the candlestick is white or green. When moving lower, they are black or red.",
+        "The black crow pattern consists of three consecutive long-bodied candlesticks that have opened within the real body of the previous candle and closed lower than the previous candle. Often, traders use this indicator in conjunction with other technical indicators or chart patterns as confirmation of a reversal."
+      ],
+      "understanding": {
+        "image": "",
+        "details": [
+
+        ]
+      },
+      "link": "",
+      "images": [
+        "https://www.investopedia.com/thmb/jkKjLzPygvTDZ5HfGjg-wyRWd8A=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/The5MostPowerfulCandlestickPatterns3-f3b280e0165a4b2fa5e5d3b42b36e337.png"
+      ],
+      "key_takeaways": [
+        "Three black crows is a bearish candlestick pattern used to predict the reversal of a current uptrend.",
+        "Traders use it alongside other technical indicators such as the relative strength index (RSI).",
+        "The size of the three black crows candles and the shadow can be used to judge whether the reversal is at risk of a retracement.",
+        "The opposite pattern of three black crows is three white soldiers, which indicates a reversal of a downtrend."
+      ],
+      "requeriments": "",
+    },
+    "name": "Three Black Crows",
+    "enabled": true
+  },
+  "CDL3INSIDE": {
+    "name": "Three Inside Up/Down",
+    "enabled": true,
+    "candle_count": ,
+    "quantshare": {
+      "signal": "Bullish",
+      "pattern": "reversal",
+      "reliability": "high",
+      "description": "Three Inside Up/Down, Note that after the long candle day that is in the same direction of the trend that the Harami pattern occurs.",
+      "info": ["A bullish Harami pattern is followed by a white day that has a higher close than the second day."],
+      "link": "https://www.quantshare.com/index.php?option=manual&dir=/QuantShare%20Language/Candlestick%20Pattern/Cdl3inside%200.html"
+    },
+    "investopedia": {
+      "description": [
+        "The terms 'three inside up and 'three inside down' refer to a pair of candle reversal patterns (each containing three individual candles) that appear on candlestick charts. The pattern requires three candles to form in a specific sequence, showing that the current trend has lost momentum and a move in the other direction might be starting."
+      ],
+      "understanding": {
+        "image": "",
+        "details": [
+
+        ]
+      },
+      "link": "https://www.investopedia.com/terms/t/three-inside-updown.asp",
+      "images": [
+        {
+          "src": "https://www.investopedia.com/thmb/E8onTmwGg4m7nco7xiEpL0axR5A=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Three_Inside_Up_Long-56a22d7f3df78cf77272e333.png",
+          "description": [
+            "The up version of the pattern is bullish, indicating the price move lower may be ending and a move higher is starting. Here are the characteristics of the pattern.",
+            "1. The market is in a downtrend or a move lower.",
+            "2. The first candle is a black (down) candle with a large real body.",
+            "3. The second candle is a white (up) candle with a small real body that opens and closes within the real body of the first candle.",
+            ".4 The third candle is a white (up) candle that closes above the close of the second candle."
+          ]
+        },
+        {
+          "src": "https://www.investopedia.com/thmb/xR0Szub0co8kLWPf3YLa4mza3OU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Three_Inside_Down_Short-56a22d7f5f9b58b7d0c78233.png",
+          "description": [
+            "The down version of the pattern is bearish. It shows the price move higher is ending and the price is starting to move lower. Here are the characteristics of the pattern.",
+            "1. The market is in an uptrend or a move higher.",
+            "2. The first candle is a white candle with a large real body.",
+            "3. The second candle is a black candle with a small real body that opens and closes within the real body of the first candle.",
+            "4. The third candle is a black candle that closes below the close of the second candle.",
+            "The three inside patterns are essentially harami patterns that are followed by a final confirmation candle, which many traders wait for with the harami anyway."
+          ]
+        },
+        {
+          "src": "https://www.investopedia.com/thmb/G6oE-K9qhiPPA9ZCCmqrxgcF3MI=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/dotdash_Final_Three_Inside_Up_Down_Jan_2021-01-dc828daa06e14b2781ef214fae35767a.jpg",
+          "description": [
+            "The following Meta (formerly Facebook Inc.) chart shows an example of a three inside down pattern that fails. It appears during a strong price rise, but the third candle is relatively small and doesn't show a lot of selling conviction. The next day the price quickly resumes trading to the upside in alignment with the broader trend.",
+            "The next two examples occur during an overall price rise and occur during pullbacks against that rise. Once the pattern occurs, the price begins to move higher again, although not necessarily right away. In both cases, the price pauses after the pattern before moving up. Therefore, it would have been prudent to have a stop loss placed below the entire pattern in order not to be prematurely stopped out on a long position."
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "The three inside up pattern is a bullish reversal pattern composed of a large down candle, a smaller up candle contained within the prior candle, and then another up candle that closes above the close of the second candle.",
+        "The three inside down pattern is a bearish reversal pattern composed of a large up candle, a smaller down candle contained within the prior candle, and then another down candle that closes below the close of the second candle.",
+        "These patterns are short-term in nature, and may not always result in a significant or even minor trend change.",
+        "Consider using these patterns within the context of an overall trend. For example, use the three inside up during a pullback in an overall uptrend."
+      ],
+      "requeriments": ""
+    }
+  },
+  "CDL3LINESTRIKE": {
+    "name": "Three-Line Strike",
+    "enabled": true,
+    "candle_count": 3,
+    "quantshare": {
+      "pattern": "continuation",
+      "reliability": "low",
+      "description": "Three-Line Strike : This function is contained within the Pattern Recognition set of indicators.",
+      "bullish": [
+        "Three long white days with consecutively higher closes are followed by a fourth day that gaps open in the direction of the trend and closes below the open of the first day.",
+      ],
+      "bearish": [
+        "Three long black days with consecutively lower closes is followed by a fourth day that gaps in the direction of the trend and closes above the open of the first day."
+      ],
+      "link": "https://www.quantshare.com/index.php?option=manual&dir=/QuantShare%20Language/Candlestick%20Pattern/Cdl3linestrike%201.html"
+    },
+    "thinkorswim": {
+      "description": [
+        "Three Line Strike is a trend continuation candlestick pattern consisting of four candles. Depending on their heights and collocation, a bullish or a bearish trend continuation can be predicted."
+      ],
+      "link": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-and-bullish/ThreeLineStrike",
+      "images": [
+        {"src": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-and-bullish/ThreeLineStrike/main/images/0", "description": []},
+        {"src": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-and-bullish/ThreeLineStrike/main/images/1", "description": []}
+      ],
+      "bearish": [
+        "The first three candles are long and bearish and continue the downtrend having Close prices consequently lower;",
+        "The second and the third candles open within the previous candle's body;",
+        "The fourth candle is bullish, opening at a new Low price;",
+        "The fourth candle's Close price is higher than the Open price of the first candle."
+      ],
+      "bullish": [
+        "The first three candles are long and bullish and continue the uptrend having Close prices consequently higher;",
+        "The second and the third candles open within the previous candle's body;",
+        "The fourth candle is bearish, opening at a new High price;",
+        "The fourth candle's Close price is lower than the Open price of the first candle."
+      ]
+    }
+  },
+  "CDL3OUTSIDE": {
+    "name": "Three Outside Up/Down",
+    "enabled": true,
+    "candle_count": 3,
+    "quantshare": {
+      "pattern": "reversal",
+      "reliability": "high",
+      "description": "Three Outside Up/Down : This function is contained within the Pattern Recognition set of indicators.",
+      "bullish": [
+        "A bearish Engulfing pattern is followed by a black day whose close is lower than the second day."
+      ],
+      "bearish": [
+        "A bullish Engulfing pattern is followed by a white day whose close is higher than the second day."
+      ],
+      "link": "https://www.quantshare.com/index.php?option=manual&dir=/QuantShare%20Language/Candlestick%20Pattern/Cdl3outside%200.html"
+    },
+    "investopedia": {
+      "description": [
+        "The three outside up and three outside down are three-candle reversal patterns that appear on candlestick charts. The pattern requires three candles to form in a specific sequence, showing that the current trend has lost momentum and might signal a reversal of an existing trend.",
+        "In particular, the pattern is formed when a bearish candlestick (one that closes lower than it opened) is followed by two instances of a bullish candlestick (which closes higher than it opens), or vice versa.",
+        "The three outside up and three outside down may be compared with a three inside up/down candle."
+      ],
+      "understanding": {
+        "image": "",
+        "details": [
+
+        ]
+      },
+      "link": "https://www.investopedia.com/terms/t/three-outside-updown.asp",
+      "images": [
+        {
+          "src": "https://www.investopedia.com/thmb/e-Bbxjn4pfQLpt5vRPcQaXLa38s=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Up_downtrend2-6e0faf62ffdb485a84167251ce18c32c.png",
+          "description": [
+            "The three outside up is a bullish candlestick pattern with the following characteristics:",
+            "1. The market is in a downtrend.",
+            "2. The first candle is bearish.",
+            "3. The second candle is bullish with a long real body and fully contains the first candle.",
+            "4. The third candle is bullish with a higher close than the second candle."
+          ]
+        },
+        {
+          "src": "https://www.investopedia.com/thmb/e-Bbxjn4pfQLpt5vRPcQaXLa38s=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Up_downtrend2-6e0faf62ffdb485a84167251ce18c32c.png",
+          "description": [
+            "The three outside down, meanwhile, is a bearish candlestick pattern with the following characteristics:",
+            "1. The market is in an uptrend.",
+            "2. The first candle is bullish.",
+            "3. The second candle is bearish with a long real body that fully contains the first candle.",
+            "4. The third candle is bearish with a close lower than the second candle."
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "Three outside up/down are patterns of three candlesticks that often signal a reversal in trend.",
+        "The three outside up and three outside down patterns are characterized by one candlestick immediately followed by two candlesticks of opposite shading.",
+        "Each tries to leverage market psychology to read near-term changes in sentiment."
+      ]
+    },
+    "thinkorswim": {
+      "description": [
+        "Three Outside Down is a bearish trend reversal candlestick pattern consisting of three candles. The first two candles of this candlestick pattern form bearish Engulfing."
+      ],
+      "link": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-only/ThreeOutsideDown",
+      "images": [
+        {"src": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-only/ThreeOutsideDown/main/images/0", "description": []}
+      ],
+      "bearish": [
+        "The first candle is bullish and continues the uptrend;",
+        "The second candle is long and bearish and its body engulfs the first candle's body;",
+        "The third candle is bearish and its Close price is lower than that of the second candle."
+      ],
+      "bullish": []
+    }
+  },
+  "CDL3STARSINSOUTH": {
+    "name": "Three Stars In The South",
+    "enabled": true,
+    "candle_count": 3,
+    "quantshare": {
+      "pattern": "reversal",
+      "reliability": "moderate",
+      "description": "Three Stars In The South, The slow down of the trend is visually obvious.",
+      "bullish": ["A long black day with a long lower shadow is followed by a similar but smaller black day whose lower shadow is shallower than the first day. The third day is a small Black Marubozu (open is the high of the day and the close is the low of the day) that lies within the second dayï¿½s trading range."],
+      "bearish": [],
+      "link": "https://www.quantshare.com/index.php?option=manual&dir=/QuantShare%20Language/Candlestick%20Pattern/Cdl3staRsinsouth%200.html"
+    },
+    "investopedia": {
+      "description": [
+        "The three stars in the south is an extremely rare three-candle bullish reversal pattern that appears on candlestick charts. It may appear after a decline, and it signals that the bearishness is fading."
+      ],
+      "understanding": {
+        "image": "",
+        "details": [
+
+        ]
+      },
+      "link": "https://www.investopedia.com/terms/t/three-stars-south.asp",
+      "images": [
+        {"src": "https://www.investopedia.com/thmb/RFwuqf3tr-yLas_woO9uBj75KJU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/dotdash-INV-final-Three-Stars-in-the-South-May-2021-01-972b353da5b94554baf7ec9f1c6f9876.jpg",
+        "description": [
+          "The pattern is rare, so examples and trades are hard to come by with this pattern. The following pattern on a Toronto Dominion Bank (TD) daily chart is a slight variation of the three stars in the south in that the third candle has a small upper shadow. Ideally, it has no shadows. Also, the third candle makes a slightly higher high than the second candle. Ideally, the third candle should be contained within the range of the second candle.",
+          "A trade could be entered when the price moves above the high of the three-bar pattern (or above the high of the second or third candle). A stop loss could be placed below the low of the candle (or below the low of the second or third candle)"
+        ]}
+      ],
+      "key_takeaways": [
+        "The three stars in the south candlestick pattern is a very rare pattern that doesn't typically precede large price moves.",
+        "This pattern is formed by three black or red (down) candles of decreasing size following a price decline.",
+        "It indicates a bullish reversal, although the price should ultimately move in the expected direction before taking a trade."
+      ]
+    },
+    "thinkorswim": {
+      "description": [
+        "Three Stars In The South is a bullish trend reversal candlestick pattern consisting of three candles."
+      ],
+      "link": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bullish-only/ThreeStarsInTheSouth",
+      "images": [
+        {"src": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bullish-only/ThreeStarsInTheSouth/main/images/0", "description": []}
+      ],
+      "bearish": [
+      ],
+      "bullish": [
+        "The first candle is long and bearish and continues the downtrend;",
+        "The first candle has a long lower shadow and no upper shadow;",
+        "The second candle is similar to the first one, but smaller, its Low price is greater than that of the first candle;",
+        "The third cadle is small and bearish, misses shadows and closes inside the second candle's range."
+      ]
+    },
+  },
+  "CDL3WHITESOLDIERS": {
+    "name": "Three Advancing White Soldiers",
+    "enabled": true,
+    "candle_count": 3,
+    "quantshare": {
+      "pattern": "reversal",
+      "reliability": "high",
+      "link": "https://www.quantshare.com/index.php?option=manual&dir=/QuantShare%20Language/Candlestick%20Pattern/Cdl3whitesoldiers%200.html",
+      "description": "Three Advancing White Soldiers, The Three White Soldiers (also known as The Advancing Three White Soldiers) is a healthy market reversal pattern.",
+      "bullish": [
+        "Three long white days with each successive open being within the body of the previous day and each successive close being higher than the previous day and near the dayï¿½s high."
+      ],
+      "bearish": []
+    },
+    "investopedia": {
+      "description": [
+        "Three white soldiers is a bullish candlestick pattern that is used to predict the reversal of the current downtrend in a pricing chart. The pattern consists of three consecutive long-bodied candlesticks that open within the previous candle's real body and a close that exceeds the previous candle's high. These candlesticks should not have very long shadows and ideally open within the real body of the preceding candle in the pattern."
+      ],
+      "understanding": {
+        "image": "",
+        "details": [
+
+        ]
+      },
+      "link": "https://www.investopedia.com/terms/t/three_white_soldiers.asp",
+      "images": [
+        {"src": "https://www.investopedia.com/thmb/SBEsnhdoQ_OnOxEj8LC0K-_AaxU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/dotdash_Final_ThreeWhite_Soldiers_Definition_2020-01-cedf748e8c644b90b96e588aa4364291.jpg",
+        "description": [
+          "The ETF had been in a strong bearish downtrend over the course of several weeks before the three white soldiers pattern marked a sharp bullish reversal. The pattern may suggest that the rally will continue, but traders should also look at other relevant factors before making a decision. For example, the stock may have reached an area of resistance at the conclusion of the formation of the pattern or the rise might have been on low volume which is not an indication of strength."
+        ]}
+      ],
+      "key_takeaways": [
+        "Three white soldiers are considered a reliable reversal pattern when confirmed by other technical indicators like the relative strength index (RSI).",
+        "The size of the candles and the length of the shadow is used to judge whether there is a risk of retracement.",
+        "The opposite pattern of three white soldiers is three black crows, which indicates the reversal of an uptrend."
+      ]
+    },
+    "thinkorswim": {
+      "description": [
+        "Three White Soldiers is a bullish trend reversal candlestick pattern consisting of three candles."
+      ],
+      "link": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bullish-only/ThreeWhiteSoldiers",
+      "images": [
+        {"src": "", "description": []}
+      ],
+      "bearish": [
+      ],
+      "bullish": [
+        "Appearing after the downtrend, all the three candles are long and bullish;",
+        "Each candle's Open price is within the previous candle's body;",
+        "Each candle's Close price is higher than that of the previous candle."
+      ]
+    }
+  },
+  "CDLABANDONEDBABY": {
+    "name": "Abandoned Baby",
+    "enabled": true,
+    "candle_count": 2,
+    "quantshare": {
+      "link": "https://www.quantshare.com/index.php?option=manual&dir=/QuantShare%20Language/Candlestick%20Pattern/CdlAbandonedbaby%200.html",
+      "pattern": "reversal",
+      "reliability": "high",
+      "description": "Abandoned Baby, A rare reversal pattern characterized by a gap followed by a Doji, which is then followed by another gap in the opposite direction.",
+      "bullish": ["A long white day is followed by a Doji that gaps in the direction of the trend. Then a black day occurs gapping in the opposite direction with no overlapping shadows."],
+      "bearish": ["A long black day is followed by a Doji that gaps in the direction of the trend. Then a white day occurs gapping in the opposite direction with no overlapping shadows."]
+    },
+    "investopedia": {
+      "link": "",
+      "description": [
+        "The bullish abandoned baby is a type of candlestick pattern that is used by traders to signal a reversal of a downtrend. It forms in a downtrend and is composed of three price bars. The first is a large down candle, followed by a doji candle that gaps below the first candle. The next candle opens higher than the doji and moves aggressively to the upside.",
+        "The expectation is that the price will continue to move higher as the pattern shows that selling has been at least temporarily exhausted. The bullish abandoned baby can be contrasted with a bearish abandoned baby pattern, which marks the possible end of an uptrend.",
+        "A bearish abandoned baby is a specialized candlestick pattern consisting of three candles, one with rising prices, a second with holding prices, and a third with falling prices. Technical analysts expect that this pattern signals at least a short-term reversal in a currently upward trending price. The occurrence of this pattern is quite rare appearing approximately 50 times over the past two decades on S&P 500 stocks. The signal is usually followed by bearish performance over the short term."
+      ],
+      "understanding": {
+        "image": "",
+        "details": [
+
+        ]
+      },
+      "images": {
+        "bullish": [
+          {"src": "https://www.investopedia.com/thmb/kP-HbDumGASRJd1MJ_km-WL8NC8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/dotdash_INV_final_Bullish_Abandoned_Baby_Jan_2021-01-c4ebdaafcc304337af922886d0416b66.jpg", "description": [
+            "The bullish abandoned baby is fairly rare since its pattern has strict requirements. Some traders allow the restrictions to be relaxed slightly, which means more patterns will be found, and the results can still be quite good.",
+            "Pattern one is a slight variation of the traditional pattern, as the doji doesn't gap below the prior close, and there are two dojis. Yet the sentiment of the pattern still shows a bullish shift. The pattern has a strong drop, indecision and leveling off, and then a strong surge higher after the dojis.",
+            "Pattern two is more traditional, except there are once again two dojis. This is acceptable, and the price shot higher following the pattern.",
+            "Pattern three is also a slight variation, as the doji didn't gap below the prior candle's close. The price moved higher following the doji, though, and an uptrend commenced."
+          ]}
+        ],
+        "bearish": [
+          {"src": "https://www.investopedia.com/thmb/mTfMTRBLzuPISGXm86U8dIttmZc=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/dotdash-INV-final-Bearish-Abandoned-Baby-Mar-2021-01-09ff0d1e3a2449f88f0e9c7e8002f3ac.jpg", "description": [
+            "A bearish abandoned baby can be a signal for a downward reversal trend in the price of a security. This pattern is formed when a doji-like candle is preceded by a gap between its lowest price and that of the previous candlestick. The previous candlestick is a tall white candlestick with small shadows.",
+            "The doji is also followed by a gap between its lowest price and the highest price of the next candle. The next candlestick is a tall red candlestick with small shadows. In this pattern, the doji candle becomes an important signal for traders and technical analysts seeking to identify a bearish reversal of a bullish trend.1",
+            "When this pattern occurs, price trends lower over the next 20 days about 65% of the time, with a median return of -3.00%, while the return for the benchmark S&P 500 index was positive for the same days.2",
+            "Bulkowski, Thomas. “Candlesticks, Statistically Investment Candles.” Stocks and Commodities, vol. 29, no 5, 2011, pp. 1-3."
+          ]},
+          {"src": "https://www.investopedia.com/thmb/ewQyX1Br24pE8lTxExgfb_ULqMI=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/dotdash-INV-final-Bearish-Abandoned-Baby-Mar-2021-02-3981337a14614ae1a4f40210559a1696.jpg", "description": [
+            "In contrast to the rare bearish abandoned baby pattern, the equally rare bullish abandoned baby pattern, with a similar price structure, forecasts a bullish trend following its appearance.",
+            "Identifying both bearish and bullish abandoned baby patterns is done by recognizing the three main characteristics that make up these patterns: first, a prevailing trend; second, the proper sequence of candles; third, two gaps in price, the first one after the first candle and the second gap after the second candle.3",
+            "White candlestick: The white candlestick depicted in the graphics above occurs when a security’s price closes higher than its open. This type of candlestick is typically white or green on a trading chart. The particular example shown includes an opening price near the low for the day and a closing price near the high for the day.",
+            "Red candlestick: The red candlestick depicted in the graphics above occurs when a security’s price closes lower than its open. This type of candlestick is typically black or red on a trading chart. The particular example shown includes an opening price near the high for the day and a closing price near the low for the day.4",
+            "Doji: A doji candlestick occurs when a security has the same open and closing price. This will typically be represented by some form of a plus sign on a trading chart, or perhaps a dash with a vertical line moving away from the dash."
+            ]}
+        ]
+      },
+      "key_takeaways": {
+        "bullish": [
+          "The bullish abandoned baby is a three-bar pattern following a downtrend.",
+          "It consists of a strong down candle, a gapped down doji, and then a strong bullish candle that gaps up.",
+          "This pattern signals the potential end of a downtrend and the start of a price move higher.",
+          "Some traders allow for slight variation. There may be more than one doji, or gaps may not be present after the first or second candle. But the overall psychology of the pattern should still be present."
+        ],
+        "bearish": [
+          "A bearish abandoned baby is a rare pattern that has a fairly strong track record for forecasting a short-term downward trend.",
+          "The key item of the bearish abandoned baby is the middle day, which should have a gap in front of it and following it, and which should close the session with price unchanged.",
+          "The bullish variation of the pattern is the bullish abandoned baby which is equally rare and also has a good track record for forecasting a reversal towards an upward trend."
+        ]
+      }
+    },
+    "thinkorswim": {
+      "link": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-and-bullish/AbandonedBaby",
+      "description": [
+        "Abandoned Baby is a trend reversal candlestick pattern consisting of three candles. Depending on their heights and collocation, a bullish or a bearish trend reversal can be predicted."
+      ],
+      "images": [
+        {"src": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-and-bullish/AbandonedBaby/main/images/0", "description": []},
+        {"src": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-and-bullish/AbandonedBaby/main/images/1", "description": []}
+      ],
+      "bearish": [
+        "The first candle is long and bullish and continues the uptrend;",
+        "The second candle is Doji gapping up from the first candle;",
+        "The third candle is bearish and gaps down from the second candle."
+      ],
+      "bullish": [
+        "The first candle is long and bearish and continues the downtrend;",
+        "The second candle is Doji gapping down from the first candle;",
+        "The third candle is bullish and gaps up from the second candle."
+      ]
+    }
+  },
+  "CDLADVANCEBLOCK": {
+    "name": "Advance Block",
+    "enabled": true,
+    "candle_count": 3,
+    "quantshare": {
+      "link": "https://www.quantshare.com/index.php?option=manual&dir=/QuantShare%20Language/Candlestick%20Pattern/CdlAdvanceblock%201.html",
+      "pattern": "reversal",
+      "reliability": "moderate",
+      "description": "Advance Block, The Advance Block is somewhat indicative as the Three White Soldiers but it is a bearish signal.",
+      "bullish": [],
+      "bearish": ["Three white days. Each successive day opens within the body of the previous day and closes above the previous day. The bodies of the candles get progressively smaller with the upper shadows of day 2 and 3 getting progressively longer."]
+    },
+    "investopedia": {
+      "link": "",
+      "description": [
+        "Advance block is the name given to a candlestick trading pattern. The pattern is a three-candle bearish setup that is considered to be a reversal pattern—a suggestion that price action is about to change from what had been an upward trend to a downward trend in relatively short time frames. Some authors suggest that in practice the formation often leads to a bullish continuation instead of a reversal."
+      ],
+      "images": {
+        "bullish": [
+          {"src": "", "description": [
+            "https://www.investopedia.com/thmb/nR7UaXyrLpX4b-A95CMtPoN4UMI=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/dotdash_Final_Advance_Block_Feb_2020-2f102ad610704541ad0583c14d4bbd7a.jpg"
+          ]}
+        ],
+        "bearish": [
+          {"src": "https://www.investopedia.com/thmb/nR7UaXyrLpX4b-A95CMtPoN4UMI=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/dotdash_Final_Advance_Block_Feb_2020-2f102ad610704541ad0583c14d4bbd7a.jpg", "description": []}
+        ]
+      },
+      "key_takeaways": {
+        "bullish": [
+          
+        ],
+        "bearish": [
+          "An advance block is a three-period candlestick pattern considered to forecast a reversal.",
+          "The pattern's success at predicting reversal is barely above random.",
+          "Reversals are more prevalent when this pattern occurs in a larger downward trend."
+        ]
+      },
+    },
+    "thinkorswim": {
+      "link": "",
+      "description": [
+        
+      ],
+      "images": [
+        {"src": "", "description": []}
+      ],
+      "bearish": [
+      ],
+      "bullish": [
+      ]
+    }
+  },
+  "CDLBELTHOLD": {
+    "name": "Belt-hold",
+    "enabled": true
+  },
+  "CDLBREAKAWAY": {
+    "name": "Breakaway",
+    "enabled": true
+  },
+  "CDLCLOSINGMARUBOZU": {
+    "name": "Closing Marubozu",
+    "enabled": true
+  },
+  "CDLCONCEALBABYSWALL": {
+    "name": "Concealing Baby Swallow",
+    "enabled": true
+  },
+  "CDLCOUNTERATTACK": {
+    "name": "Counterattack",
+    "enabled": true
+  },
+  "CDLDARKCLOUDCOVER": {
+    "name": "Dark Cloud Cover",
+    "enabled": true
+  },
+  "CDLDOJI": {
+    "name": "Doji",
+    "enabled": true
+  },
+  "CDLDOJISTAR": {
+    "name": "Doji Star",
+    "enabled": true
+  },
+  "CDLDRAGONFLYDOJI": {
+    "name": "Dragonfly Doji",
+    "enabled": true
+  },
+  "CDLENGULFING": {
+    "name": "Engulfing Pattern",
+    "enabled": true
+  },
+  "CDLEVENINGDOJISTAR": {
+    "name": "Evening Doji Star",
+    "enabled": true
+  },
+  "CDLEVENINGSTAR": {
+    "name": "Evening Star",
+    "enabled": true
+  },
+  "CDLGAPSIDESIDEWHITE": {
+    "name": "Up/Down-gap side-by-side white lines",
+    "enabled": true
+  },
+  "CDLGRAVESTONEDOJI": {
+    "name": "Gravestone Doji",
+    "enabled": true
+  },
+  "CDLHAMMER": {
+    "name": "Hammer",
+    "enabled": true
+  },
+  "CDLHANGINGMAN": {
+    "name": "Hanging Man",
+    "enabled": true
+  },
+  "CDLHARAMI": {
+    "name": "Harami Pattern",
+    "enabled": true
+  },
+  "CDLHARAMICROSS": {
+    "name": "Harami Cross Pattern",
+    "enabled": true
+  },
+  "CDLHIGHWAVE": {
+    "name": "High-Wave Candle",
+    "enabled": true
+  },
+  "CDLHIKKAKE": {
+    "name": "Hikkake Pattern",
+    "enabled": true
+  },
+  "CDLHIKKAKEMOD": {
+    "name": "Modified Hikkake Pattern",
+    "enabled": true
+  },
+  "CDLHOMINGPIGEON": {
+    "name": "Homing Pigeon",
+    "enabled": true
+  },
+  "CDLIDENTICAL3CROWS": {
+    "name": "Identical Three Crows",
+    "enabled": true
+  },
+  "CDLINNECK": {
+    "name": "In-Neck Pattern",
+    "enabled": true
+  },
+  "CDLINVERTEDHAMMER": {
+    "name": "Inverted Hammer",
+    "enabled": true
+  },
+  "CDLKICKING": {
+    "name": "Kicking",
+    "enabled": true
+  },
+  "CDLKICKINGBYLENGTH": {
+    "name": "Kicking - bull/bear determined by the longer marubozu",
+    "enabled": true
+  },
+  "CDLLADDERBOTTOM": {
+    "name": "Ladder Bottom",
+    "enabled": true
+  },
+  "CDLLONGLEGGEDDOJI": {
+    "name": "Long Legged Doji",
+    "enabled": true
+  },
+  "CDLLONGLINE": {
+    "name": "Long Line Candle",
+    "enabled": true
+  },
+  "CDLMARUBOZU": {
+    "name": "Marubozu",
+    "enabled": true
+  },
+  "CDLMATCHINGLOW": {
+    "name": "Matching Low",
+    "enabled": true
+  },
+  "CDLMATHOLD": {
+    "name": "Mat Hold",
+    "enabled": true
+  },
+  "CDLMORNINGDOJISTAR": {
+    "name": "Morning Doji Star",
+    "enabled": true
+  },
+  "CDLMORNINGSTAR": {
+    "name": "Morning Star",
+    "enabled": true
+  },
+  "CDLONNECK": {
+    "name": "On-Neck Pattern",
+    "enabled": true
+  },
+  "CDLPIERCING": {
+    "name": "Piercing Pattern",
+    "enabled": true
+  },
+  "CDLRICKSHAWMAN": {
+    "name": "Rickshaw Man",
+    "enabled": true
+  },
+  "CDLRISEFALL3METHODS": {
+    "name": "Rising/Falling Three Methods",
+    "enabled": true
+  },
+  "CDLSEPARATINGLINES": {
+    "name": "Separating Lines",
+    "enabled": true
+  },
+  "CDLSHOOTINGSTAR": {
+    "name": "Shooting Star",
+    "enabled": true
+  },
+  "CDLSHORTLINE": {
+    "name": "Short Line Candle",
+    "enabled": true
+  },
+  "CDLSPINNINGTOP": {
+    "name": "Spinning Top",
+    "enabled": true
+  },
+  "CDLSTALLEDPATTERN": {
+    "name": "Stalled Pattern",
+    "enabled": true
+  },
+  "CDLSTICKSANDWICH": {
+    "name": "Stick Sandwich",
+    "enabled": true
+  },
+  "CDLTAKURI": {
+    "name": "Takuri (Dragonfly Doji with very long lower shadow)",
+    "enabled": true
+  },
+  "CDLTASUKIGAP": {
+    "name": "Tasuki Gap",
+    "enabled": true
+  },
+  "CDLTHRUSTING": {
+    "name": "Thrusting Pattern",
+    "enabled": true
+  },
+  "CDLTRISTAR": {
+    "name": "Tristar Pattern",
+    "enabled": true
+  },
+  "CDLUNIQUE3RIVER": {
+    "name": "Unique 3 River",
+    "enabled": true
+  },
+  "CDLUPSIDEGAP2CROWS": {
+    "name": "Upside Gap Two Crows",
+    "enabled": true
+  },
+  "CDLXSIDEGAP3METHODS": {
+    "name": "Upside/Downside Gap Three Methods",
+    "enabled": true
+  }
+}

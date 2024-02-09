@@ -1,0 +1,724 @@
+{
+  "CDL2CROWS": {
+    "name": "Two Crows",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim", "content": [
+          {"type": "bearish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-only/TwoCrows"}
+        ]
+      }
+    ]
+    
+  },
+  "CDL3BLACKCROWS": {
+    "name": "Three Black Crows",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bearish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-only/ThreeBlackCrows"}
+        ]
+      }
+    ]
+  },
+  "CDL3INSIDE": {
+    "name": "Three Inside Up/Down",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bearish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-only/ThreeInsideDown"},
+          {"type": "bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bullish-only/ThreeInsideUp"}
+        ]
+      }
+    ]
+  },
+  "CDL3LINESTRIKE": {
+    "name": "Three-Line Strike",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bearish_and_bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-and-bullish/ThreeLineStrike"}
+        ]
+      }
+    ]
+  },
+  "CDL3OUTSIDE": {
+    "name": "Three Outside Up/Down",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bearish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-only/ThreeOutsideDown"}
+        ]
+      }
+    ]
+  },
+  "CDL3STARSINSOUTH": {
+    "name": "Three Stars In The South",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bullish-only/ThreeStarsInTheSouth"}
+        ]
+      }
+    ]
+  },
+  "CDL3WHITESOLDIERS": {
+    "name": "Three Advancing White Soldiers",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bullish-only/ThreeWhiteSoldiers"}
+        ]
+      }
+    ]
+  },
+  "CDLABANDONEDBABY": {
+    "name": "Abandoned Baby",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bearish_and_bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-and-bullish/AbandonedBaby"}
+        ]
+      }
+    ]
+  },
+  "CDLADVANCEBLOCK": {
+    "name": "Advance Block",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bearish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-only/AdvanceBlock"}
+        ]
+      }
+    ]
+  },
+  "CDLBELTHOLD": {
+    "name": "Belt-hold",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bearish_and_bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-and-bullish/BeltHold"}
+        ]
+      }
+    ]
+  },
+  "CDLBREAKAWAY": {
+    "name": "Breakaway",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bearish_and_bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-and-bullish/Breakaway"}
+        ]
+      }
+    ]
+  },
+  "CDLCLOSINGMARUBOZU": {
+    "name": "Closing Marubozu",
+    "enabled": true,
+    "info": [
+      {
+        "source": "quantshare",
+        "content": [
+          {"type": "bearish_and_bullish", "url": "https://www.quantshare.com/index.php?option=manual&dir=/QuantShare%20Language/Candlestick%20Pattern/CdlClosingmarubozu%201.html"}
+        ]
+      }
+    ]
+  },
+  "CDLCONCEALBABYSWALL": {
+    "name": "Concealing Baby Swallow",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bullish-only/ConcealingBabySwallow"}
+        ]
+      }
+    ]
+  },
+  "CDLCOUNTERATTACK": {
+    "name": "Counterattack",
+    "enabled": true,
+    "info": [
+      {
+        "source": "investopedia",
+        "content": [
+          {"type": "bearish_and_bullish", "url": "https://www.investopedia.com/terms/c/counterattack.asp"}
+        ]
+      }
+    ]
+  },
+  "CDLDARKCLOUDCOVER": {
+    "name": "Dark Cloud Cover",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bearish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-only/DarkCloudCover"}
+        ]
+      }
+    ]
+  },
+  "CDLDOJI": {
+    "name": "Doji",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bearish_and_bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-and-bullish/Doji"}
+        ]
+      }
+    ]
+  },
+  "CDLDOJISTAR": {
+    "name": "Doji Star",
+    "enabled": true,
+    "info": [
+      {
+        "source": "quantshare",
+        "content": [
+          {"type": "bearish_and_bullish", "url": "https://www.quantshare.com/index.php?option=manual&dir=/QuantShare%20Language/Candlestick%20Pattern/CdlDojistar%201.html"}
+        ]
+      }
+    ]
+  },
+  "CDLENGULFING": {
+    "name": "Engulfing Pattern",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bearish_and_bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-and-bullish/Engulfing"}
+        ]
+      }
+    ]
+  },
+  "CDLEVENINGDOJISTAR": {
+    "name": "Evening Doji Star",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bearish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-only/EveningDojiStar"}
+        ]
+      }
+    ]
+  },
+  "CDLEVENINGSTAR": {
+    "name": "Evening Star",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bearish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-only/EveningStar"}
+        ]
+      }
+    ]
+  },
+  "CDLGAPSIDESIDEWHITE": {
+    "name": "Up/Down-gap side-by-side white lines",
+    "enabled": true,
+    "info": [
+      {
+        "source": "quantshare",
+        "content": [
+          {"type": "bearish_and_bullish", "url": "https://www.quantshare.com/index.php?option=manual&dir=/QuantShare%20Language/Candlestick%20Pattern/CdlGapsidesidewhite%200.html"}
+        ]
+      }
+    ]
+  },
+  "CDLGRAVESTONEDOJI": {
+    "name": "Gravestone Doji",
+    "enabled": true,
+    "info": [
+      {
+        "source": "quantshare",
+        "content": [
+          {"type": "bearish_and_bullish", "url": "https://www.quantshare.com/index.php?option=manual&dir=/QuantShare%20Language/Candlestick%20Pattern/CdlGravestonedoji%200.html"}
+        ]
+      }
+    ]
+  },
+  "CDLHAMMER": {
+    "name": "Hammer",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bullish-only/Hammer"}
+        ]
+      }
+    ]
+  },
+  "CDLHANGINGMAN": {
+    "name": "Hanging Man",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bearish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-only/HangingMan"}
+        ]
+      }
+    ]
+  },
+  "CDLHARAMI": {
+    "name": "Harami Pattern",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bearish_and_bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-and-bullish/Harami"}
+        ]
+      }
+    ]
+  },
+  "CDLHARAMICROSS": {
+    "name": "Harami Cross Pattern",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bearish_and_bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-and-bullish/HaramiCross"}
+        ]
+      }
+    ]
+  },
+  "CDLHIGHWAVE": {
+    "name": "High-Wave Candle",
+    "enabled": true,
+    "info": [
+      {
+        "source": "quantshare",
+        "content": [
+          {"type": "bearish_and_bullish", "url": "https://www.quantshare.com/index.php?option=manual&dir=/QuantShare%20Language/Candlestick%20Pattern/CdlHighwave%201.html"}
+        ]
+      }
+    ]
+  },
+  "CDLHIKKAKE": {
+    "name": "Hikkake Pattern",
+    "enabled": true,
+    "info": [
+      {
+        "source": "",
+        "content": [
+          {"type": "", "url": ""}
+        ]
+      }
+    ]
+  },
+  "CDLHIKKAKEMOD": {
+    "name": "Modified Hikkake Pattern",
+    "enabled": true,
+    "info": [
+      {
+        "source": "",
+        "content": [
+          {"type": "", "url": ""}
+        ]
+      }
+    ]
+  },
+  "CDLHOMINGPIGEON": {
+    "name": "Homing Pigeon",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bullish-only/HomingPigeon"}
+        ]
+      }
+    ]
+  },
+  "CDLIDENTICAL3CROWS": {
+    "name": "Identical Three Crows",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bearish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-only/IdenticalThreeCrows"}
+        ]
+      }
+    ]
+  },
+  "CDLINNECK": {
+    "name": "In-Neck Pattern",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bearish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-only/InNeck"}
+        ]
+      }
+    ]
+  },
+  "CDLINVERTEDHAMMER": {
+    "name": "Inverted Hammer",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bullish-only/InvertedHammer"}
+        ]
+      }
+    ]
+  },
+  "CDLKICKING": {
+    "name": "Kicking",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bearish_and_bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-and-bullish/Kicking"}
+        ]
+      }
+    ]
+  },
+  "CDLKICKINGBYLENGTH": {
+    "name": "Kicking - bull/bear determined by the longer marubozu",
+    "enabled": true,
+    "info": [
+      {
+        "source": "",
+        "content": [
+          {"type": "", "url": ""}
+        ]
+      }
+    ]
+  },
+  "CDLLADDERBOTTOM": {
+    "name": "Ladder Bottom",
+    "enabled": true,
+    "info": [
+      {
+        "source": "quantshare",
+        "content": [
+          {"type": "bullish", "url": "https://www.quantshare.com/index.php?option=manual&dir=/QuantShare%20Language/Candlestick%20Pattern/CdlLadderbottom%200.html"}
+        ]
+      }
+    ]
+  },
+  "CDLLONGLEGGEDDOJI": {
+    "name": "Long Legged Doji",
+    "enabled": true,
+    "info": [
+      {
+        "source": "quantshare",
+        "content": [
+          {"type": "bearish_and_bullish", "url": "https://www.quantshare.com/index.php?option=manual&dir=/QuantShare%20Language/Candlestick%20Pattern/CdlLongleggeddoji%201.html"}
+        ]
+      }
+    ]
+  },
+  "CDLLONGLINE": {
+    "name": "Long Line Candle",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bearish_and_bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-and-bullish/LongLeggedDoji"}
+        ]
+      }
+    ]
+  },
+  "CDLMARUBOZU": {
+    "name": "Marubozu",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bearish_and_bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-and-bullish/Marubozu"}
+        ]
+      }
+    ]
+  },
+  "CDLMATCHINGLOW": {
+    "name": "Matching Low",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bullish-only/MatchingLow"}
+        ]
+      }
+    ]
+  },
+  "CDLMATHOLD": {
+    "name": "Mat Hold",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bullish-only/MatHold"}
+        ]
+      }
+    ]
+  },
+  "CDLMORNINGDOJISTAR": {
+    "name": "Morning Doji Star",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bullish-only/MorningDojiStar"}
+        ]
+      }
+    ]
+  },
+  "CDLMORNINGSTAR": {
+    "name": "Morning Star",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bullish-only/MorningStar"}
+        ]
+      }
+    ]
+  },
+  "CDLONNECK": {
+    "name": "On-Neck Pattern",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bearish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-only/OnNeck"}
+        ]
+      }
+    ]
+  },
+  "CDLPIERCING": {
+    "name": "Piercing Pattern",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bullish-only/PiercingLine"}
+        ]
+      }
+    ]
+  },
+  "CDLRICKSHAWMAN": {
+    "name": "Rickshaw Man",
+    "enabled": true,
+    "info": [
+      {
+        "source": "quantshare",
+        "content": [
+          {"type": "indecision", "url": "https://www.quantshare.com/index.php?option=manual&dir=/QuantShare%20Language/Candlestick%20Pattern/CdlRickshawman%201.html"}
+        ]
+      }
+    ]
+  },
+  "CDLRISEFALL3METHODS": {
+    "name": "Rising/Falling Three Methods",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bearish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-only/FallingThreeMethods"},
+          {"type": "bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bullish-only/RisingThreeMethods"}
+        ]
+      }
+    ]
+  },
+  "CDLSEPARATINGLINES": {
+    "name": "Separating Lines",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-and-bullish/SeparatingLines"}
+        ]
+      }
+    ]
+  },
+  "CDLSHOOTINGSTAR": {
+    "name": "Shooting Star",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bearish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-only/ShootingStar"}
+        ]
+      }
+    ]
+  },
+  "CDLSHORTLINE": {
+    "name": "Short Line Candle",
+    "enabled": true,
+    "info": [
+      {
+        "source": "quantshare",
+        "content": [
+          {"type": "indecision", "url": "https://www.quantshare.com/index.php?option=manual&dir=/QuantShare%20Language/Candlestick%20Pattern/CdlShortline%200.html"}
+        ]
+      }
+    ]
+  },
+  "CDLSPINNINGTOP": {
+    "name": "Spinning Top",
+    "enabled": true,
+    "info": [
+      {
+        "source": "quantshare",
+        "content": [
+          {"type": "indecision", "url": "https://www.quantshare.com/index.php?option=manual&dir=/QuantShare%20Language/Candlestick%20Pattern/CdlSpinningtop%201.html"}
+        ]
+      }
+    ]
+  },
+  "CDLSTALLEDPATTERN": {
+    "name": "Stalled Pattern",
+    "enabled": true,
+    "info": [
+      {
+        "source": "quantshare",
+        "content": [
+          {"type": "indecision", "url": "https://www.quantshare.com/index.php?option=manual&dir=/QuantShare%20Language/Candlestick%20Pattern/CdlStalledpattern%200.html"}
+        ]
+      }
+    ]
+  },
+  "CDLSTICKSANDWICH": {
+    "name": "Stick Sandwich",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bullish-only/StickSandwich"}
+        ]
+      }
+    ]
+  },
+  "CDLTAKURI": {
+    "name": "Takuri (Dragonfly Doji with very long lower shadow)",
+    "enabled": true,
+    "info": [
+      {
+        "source": "",
+        "content": [
+          {"type": "", "url": ""}
+        ]
+      }
+    ]
+  },
+  "CDLTASUKIGAP": {
+    "name": "Tasuki Gap",
+    "enabled": true,
+    "info": [
+      {
+        "source": "quantshare",
+        "content": [
+          {"type": "bearish_and_bullish", "url": "https://www.quantshare.com/index.php?option=manual&dir=/QuantShare%20Language/Candlestick%20Pattern/CdlTasukigap%201.html"}
+        ]
+      }
+    ]
+  },
+  "CDLTHRUSTING": {
+    "name": "Thrusting Pattern",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bearish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bearish-only/Thrusting"}
+        ]
+      }
+    ]
+  },
+  "CDLTRISTAR": {
+    "name": "Tristar Pattern",
+    "enabled": true,
+    "info": [
+      {
+        "source": "",
+        "content": [
+          {"type": "", "url": ""}
+        ]
+      }
+    ]
+  },
+  "CDLUNIQUE3RIVER": {
+    "name": "Unique 3 River",
+    "enabled": true,
+    "info": [
+      {
+        "source": "quantshare",
+        "content": [
+          {"type": "bullish", "url": "https://www.quantshare.com/index.php?option=manual&dir=/QuantShare%20Language/Candlestick%20Pattern/CdlUnique3river%201.html"}
+        ]
+      }
+    ]
+  },
+  "CDLUPSIDEGAP2CROWS": {
+    "name": "Upside Gap Two Crows",
+    "enabled": true,
+    "info": [
+      {
+        "source": "quantshare",
+        "content": [
+          {"type": "bearish", "url": "https://www.quantshare.com/index.php?option=manual&dir=/QuantShare%20Language/Candlestick%20Pattern/CdlUpsidegap2crows%201.html"}
+        ]
+      }
+    ]
+  },
+  "CDLXSIDEGAP3METHODS": {
+    "name": "Upside/Downside Gap Three Methods",
+    "enabled": true,
+    "info": [
+      {
+        "source": "thinkorswim",
+        "content": [
+          {"type": "bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bullish-only/UpsideGapThreeMethods"}
+        ]
+      }
+    ]
+  }
+}

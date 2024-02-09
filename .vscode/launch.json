@@ -10,11 +10,11 @@
       "request": "launch",
       "program": "${file}",
       "console": "integratedTerminal",
-      "justMyCode": true,
+      "justMyCode": false,
       "cwd": "${fileDirname}",
-      "env": {
-        "PYTHONPATH": "${workspaceFolder}/.venv"
-      },
+      // "env": {
+      //   "PYTHONPATH": "${workspaceFolder}/.venv"
+      // },
     },
     {
       "name": "Kaizen Finance API",

@@ -24,6 +24,7 @@ investing_com   = Blueprint("_".join(["routes", module_path, submodule_path]),__
 @investing_com.route(f"/{api_path}/{module_path}/{submodule_path}", methods=["GET"])
 def news():
     if request.method == "GET":
-        countries=['Euro Zone', 'France', 'Germany', 'Spain', 'United States', 'United Kingdom']
-        fnews = investpy.news.economic_calendar(countries=countries)
+        countries=['Euro Zone', 'United States', 'Germany', 'Spain'] #, 'France', 'United Kingdom'
+        importances=['high', 'medium']
+        fnews = investpy.news.economic_calendar(countries=countries, importances=importances)
         return jsonify(fnews.to_dict(orient="records"))

@@ -1,4 +1,6 @@
 from requests import HTTPError
+import traceback
+import json
 
 from flask import Blueprint, jsonify, request
 import yfinance as yf
@@ -9,10 +11,10 @@ module_path     = "yahoo_finance"
 yahoo_finance   = Blueprint("_".join(["routes", module_path]),__name__)
 
 def get_info(ticker):
-    try:
+    # try:
         return yf.Tickers(ticker).tickers[ticker].info
-    except HTTPError as e:
-        raise e
+    # except HTTPError as e:
+    #     raise e
 
 def add_quote_type_info(data, data_raw):
     if data["quoteType"] == "ETF":
@@ -30,11 +32,37 @@ def add_quote_type_info(data, data_raw):
         )
     return data
     
+@yahoo_finance.errorhandler(500)
+def error(e):
+    print(traceback.format_exc())
+    """Return JSON instead of HTML for HTTP errors."""
+    # start with the correct headers and status code from the error
+    response = e.get_response()
+    # replace the body with JSON
+    response.data = json.dumps({
+        "code": e.code, "name": e.name,
+        "description": e.description,
+    })
+    response.content_type = "application/json"
+    return response
+
+@yahoo_finance.errorhandler(404)
+def error(e):
+    """Return JSON instead of HTML for HTTP errors."""
+    # start with the correct headers and status code from the error
+    response = e.get_response()
+    # replace the body with JSON
+    response.data = json.dumps({
+        "code": e.code, "name": e.name,
+        "description": e.description,
+    })
+    response.content_type = "application/json"
+    return response
 
 @yahoo_finance.route(f"/{api_path}/{module_path}/<symbol>", methods=["GET"])
 def info(symbol):
     if request.method == "GET":
-        try:
+        # try:
             data_raw = get_info(symbol)
             print(data_raw)
             data = dict(
@@ -47,17 +75,17 @@ def info(symbol):
                     "shortName": data_raw["shortName"],
                     "timeZoneFullName": data_raw["timeZoneFullName"],
                     "timeZoneShortName": data_raw["timeZoneShortName"],
-                    "longBusinessSummary": data_raw["longBusinessSummary"],
-                    "auditRisk": data_raw["auditRisk"],
-                    "overallRisk": data_raw["overallRisk"],
+                    "longBusinessSummary": data_raw["longBusinessSummary"] if 'longBusinessSummary' in data_raw else '',
+                    "auditRisk": data_raw["auditRisk"] if 'auditRisk' in data_raw else '',
+                    "overallRisk": data_raw["overallRisk"] if 'overallRisk' in data_raw else '',
                     "fiftyTwoWeekLow": data_raw["fiftyTwoWeekLow"],
                     "fiftyTwoWeekHigh": data_raw["fiftyTwoWeekHigh"],
                     "fiftyDayAverage": data_raw["fiftyDayAverage"],
-                    "recommendationKey": data_raw["recommendationKey"],
-                    "numberOfAnalystOpinions": data_raw["numberOfAnalystOpinions"]
+                    "recommendationKey": data_raw["recommendationKey"] if 'recommendationKey' in data_raw else '',
+                    "numberOfAnalystOpinions": data_raw["numberOfAnalystOpinions"] if 'numberOfAnalystOpinions' in data_raw else ''
                     
                 }
             )
             return jsonify(add_quote_type_info(data, data_raw))
-        except HTTPError as e:
-            return jsonify({"message": "Symbol not found"}), e.response.status_code
+        # except HTTPError as e:
+        #     return jsonify({"message": "Symbol not found"}), e.response.status_code

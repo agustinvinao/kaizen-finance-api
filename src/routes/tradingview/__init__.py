@@ -2,6 +2,7 @@ from datetime import date, datetime, timedelta
 from enum import Enum
 from helpers import to_date
 from constants import api_path
+import os
 import json
 import traceback
 
@@ -74,3 +75,27 @@ def history(interval, exchange, symbol):
         df = df.loc[starts:].reset_index()
         df['datetime'] = df['datetime'].dt.strftime("%Y-%m-%d %H:%M:%S")
         return jsonify(df.to_dict(orient="records"))
+    
+@tradingview.route("/api/tradingview/patterns/<interval>/<exchange>/<symbol>", methods=["GET"])
+def patterns(interval, exchange, symbol):
+    if request.method == "GET":
+        base_dir = "/Users/agustinvinao/dev/shared/personal/portfolio/kaizen-finance-api/src/routes/tradingview/"
+        file = "pattern_recognition.json"
+        json_path = os.path.join(base_dir, file)
+        data = None
+        with open(json_path) as f:
+            data = json.load(f)
+        return jsonify(data)
+        # starts = request.args.get('starts', default = date.today(), type = to_date)
+        # ends = request.args.get('ends', default = date.today() + timedelta(days=1), type = to_date)
+        # n_bars = (ends - starts).days
+        # if KaizenInterval[interval].value == Interval.in_4_hour:
+        #     n_bars = n_bars * 6
+        # elif KaizenInterval[interval].value == Interval.in_1_hour:
+        #     n_bars = n_bars * 24
+        # elif KaizenInterval[interval].value == Interval.in_30_minute:
+        #     n_bars = n_bars * 48
+        # df = tv.get_hist(symbol=symbol, exchange=exchange, interval=KaizenInterval[interval].value, n_bars=n_bars, extended_session=True)
+        # df = df.loc[starts:].reset_index()
+        # df['datetime'] = df['datetime'].dt.strftime("%Y-%m-%d %H:%M:%S")
+        # return jsonify(df.to_dict(orient="records"))
