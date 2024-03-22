@@ -2,6 +2,9 @@
   "CDL2CROWS": {
     "name": "Two Crows",
     "enabled": true,
+    "signal": "bearish",
+    "pattern": "reversal",
+    "reliability": "medium",
     "info": [
       {
         "source": "thinkorswim", "content": [
@@ -14,6 +17,9 @@
   "CDL3BLACKCROWS": {
     "name": "Three Black Crows",
     "enabled": true,
+    "signal": "bearish",
+    "pattern": "reversal",
+    "reliability": "high",
     "info": [
       {
         "source": "thinkorswim",
@@ -26,6 +32,9 @@
   "CDL3INSIDE": {
     "name": "Three Inside Up/Down",
     "enabled": true,
+    "signal": "bullish",
+    "pattern": "reversal",
+    "reliability": "high",
     "info": [
       {
         "source": "thinkorswim",
@@ -39,6 +48,9 @@
   "CDL3LINESTRIKE": {
     "name": "Three-Line Strike",
     "enabled": true,
+    "signal": "bearish_and_bullish",
+    "pattern": "continuation",
+    "reliability": "low",
     "info": [
       {
         "source": "thinkorswim",
@@ -51,6 +63,9 @@
   "CDL3OUTSIDE": {
     "name": "Three Outside Up/Down",
     "enabled": true,
+    "signal": "bearish_and_bullish",
+    "pattern": "reversal",
+    "reliability": "high",
     "info": [
       {
         "source": "thinkorswim",
@@ -63,6 +78,9 @@
   "CDL3STARSINSOUTH": {
     "name": "Three Stars In The South",
     "enabled": true,
+    "signal": "bullish",
+    "pattern": "reversal",
+    "reliability": "moderate",
     "info": [
       {
         "source": "thinkorswim",
@@ -75,6 +93,9 @@
   "CDL3WHITESOLDIERS": {
     "name": "Three Advancing White Soldiers",
     "enabled": true,
+    "signal": "bullish",
+    "pattern": "reversal",
+    "reliability": "high",
     "info": [
       {
         "source": "thinkorswim",
@@ -87,6 +108,9 @@
   "CDLABANDONEDBABY": {
     "name": "Abandoned Baby",
     "enabled": true,
+    "signal": "bearish_and_bullish",
+    "pattern": "reversal",
+    "reliability": "high",
     "info": [
       {
         "source": "thinkorswim",
@@ -99,6 +123,9 @@
   "CDLADVANCEBLOCK": {
     "name": "Advance Block",
     "enabled": true,
+    "signal": "bearish",
+    "pattern": "reversal",
+    "reliability": "moderate",
     "info": [
       {
         "source": "thinkorswim",
@@ -111,6 +138,9 @@
   "CDLBELTHOLD": {
     "name": "Belt-hold",
     "enabled": true,
+    "signal": "bearish_and_bullish",
+    "pattern": "reversal",
+    "reliability": "low",
     "info": [
       {
         "source": "thinkorswim",
@@ -123,6 +153,9 @@
   "CDLBREAKAWAY": {
     "name": "Breakaway",
     "enabled": true,
+    "signal": "bearish_and_bullish",
+    "pattern": "reversal",
+    "reliability": "medium",
     "info": [
       {
         "source": "thinkorswim",
@@ -135,6 +168,9 @@
   "CDLCLOSINGMARUBOZU": {
     "name": "Closing Marubozu",
     "enabled": true,
+    "signal": "bearish_and_bullish",
+    "pattern": "reversal/continuation",
+    "reliability": "low",
     "info": [
       {
         "source": "quantshare",
@@ -147,6 +183,9 @@
   "CDLCONCEALBABYSWALL": {
     "name": "Concealing Baby Swallow",
     "enabled": true,
+    "signal": "bullish",
+    "pattern": "reversal",
+    "reliability": "high",
     "info": [
       {
         "source": "thinkorswim",
@@ -159,6 +198,9 @@
   "CDLCOUNTERATTACK": {
     "name": "Counterattack",
     "enabled": true,
+    "signal": "bearish_and_bullish",
+    "pattern": "",
+    "reliability": "",
     "info": [
       {
         "source": "investopedia",
@@ -171,6 +213,9 @@
   "CDLDARKCLOUDCOVER": {
     "name": "Dark Cloud Cover",
     "enabled": true,
+    "signal": "bearish",
+    "pattern": "reversal",
+    "reliability": "high",
     "info": [
       {
         "source": "thinkorswim",
@@ -183,6 +228,9 @@
   "CDLDOJI": {
     "name": "Doji",
     "enabled": true,
+    "signal": "indecision",
+    "pattern": "reversal/continuation",
+    "reliability": "low",
     "info": [
       {
         "source": "thinkorswim",
@@ -195,6 +243,9 @@
   "CDLDOJISTAR": {
     "name": "Doji Star",
     "enabled": true,
+    "signal": "bearish_and_bullish",
+    "pattern": "reversal",
+    "reliability": "moderate",
     "info": [
       {
         "source": "quantshare",
@@ -207,6 +258,9 @@
   "CDLENGULFING": {
     "name": "Engulfing Pattern",
     "enabled": true,
+    "signal": "bearish_and_bullish",
+    "pattern": "reversal",
+    "reliability": "moderate",
     "info": [
       {
         "source": "thinkorswim",
@@ -219,6 +273,9 @@
   "CDLEVENINGDOJISTAR": {
     "name": "Evening Doji Star",
     "enabled": true,
+    "signal": "bearish",
+    "pattern": "reversal",
+    "reliability": "high",
     "info": [
       {
         "source": "thinkorswim",
@@ -231,6 +288,9 @@
   "CDLEVENINGSTAR": {
     "name": "Evening Star",
     "enabled": true,
+    "signal": "bearish",
+    "pattern": "reversal",
+    "reliability": "high",
     "info": [
       {
         "source": "thinkorswim",
@@ -243,6 +303,9 @@
   "CDLGAPSIDESIDEWHITE": {
     "name": "Up/Down-gap side-by-side white lines",
     "enabled": true,
+    "signal": "bearish_and_bullish",
+    "pattern": "continuation",
+    "reliability": "moderate",
     "info": [
       {
         "source": "quantshare",
@@ -255,6 +318,9 @@
   "CDLGRAVESTONEDOJI": {
     "name": "Gravestone Doji",
     "enabled": true,
+    "signal": "bearish_and_bullish",
+    "pattern": "reversal",
+    "reliability": "low/moderate",
     "info": [
       {
         "source": "quantshare",
@@ -267,6 +333,9 @@
   "CDLHAMMER": {
     "name": "Hammer",
     "enabled": true,
+    "signal": "bullish",
+    "pattern": "reversal",
+    "reliability": "low/moderate",
     "info": [
       {
         "source": "thinkorswim",
@@ -279,6 +348,9 @@
   "CDLHANGINGMAN": {
     "name": "Hanging Man",
     "enabled": true,
+    "signal": "bearish",
+    "pattern": "reversal",
+    "reliability": "low/moderate",
     "info": [
       {
         "source": "thinkorswim",
@@ -291,6 +363,9 @@
   "CDLHARAMI": {
     "name": "Harami Pattern",
     "enabled": true,
+    "signal": "bullish",
+    "pattern": "reversal",
+    "reliability": "low",
     "info": [
       {
         "source": "thinkorswim",
@@ -303,6 +378,9 @@
   "CDLHARAMICROSS": {
     "name": "Harami Cross Pattern",
     "enabled": true,
+    "signal": "bearish_and_bullish",
+    "pattern": "reversal",
+    "reliability": "low",
     "info": [
       {
         "source": "thinkorswim",
@@ -315,6 +393,9 @@
   "CDLHIGHWAVE": {
     "name": "High-Wave Candle",
     "enabled": true,
+    "signal": "indecision",
+    "pattern": "reversal",
+    "reliability": "medium",
     "info": [
       {
         "source": "quantshare",
@@ -327,6 +408,9 @@
   "CDLHIKKAKE": {
     "name": "Hikkake Pattern",
     "enabled": true,
+    "signal": "",
+    "pattern": "",
+    "reliability": "",
     "info": [
       {
         "source": "",
@@ -339,6 +423,9 @@
   "CDLHIKKAKEMOD": {
     "name": "Modified Hikkake Pattern",
     "enabled": true,
+    "signal": "",
+    "pattern": "",
+    "reliability": "",
     "info": [
       {
         "source": "",
@@ -351,6 +438,9 @@
   "CDLHOMINGPIGEON": {
     "name": "Homing Pigeon",
     "enabled": true,
+    "signal": "bullish",
+    "pattern": "reversal",
+    "reliability": "moderate",
     "info": [
       {
         "source": "thinkorswim",
@@ -363,6 +453,9 @@
   "CDLIDENTICAL3CROWS": {
     "name": "Identical Three Crows",
     "enabled": true,
+    "signal": "bearish",
+    "pattern": "reversal",
+    "reliability": "high",
     "info": [
       {
         "source": "thinkorswim",
@@ -375,6 +468,9 @@
   "CDLINNECK": {
     "name": "In-Neck Pattern",
     "enabled": true,
+    "signal": "bearish",
+    "pattern": "continuation",
+    "reliability": "moderate",
     "info": [
       {
         "source": "thinkorswim",
@@ -387,6 +483,9 @@
   "CDLINVERTEDHAMMER": {
     "name": "Inverted Hammer",
     "enabled": true,
+    "signal": "bullish",
+    "pattern": "reversal",
+    "reliability": "low/moderate",
     "info": [
       {
         "source": "thinkorswim",
@@ -399,6 +498,9 @@
   "CDLKICKING": {
     "name": "Kicking",
     "enabled": true,
+    "signal": "bearish_and_bullish",
+    "pattern": "reversal",
+    "reliability": "high",
     "info": [
       {
         "source": "thinkorswim",
@@ -411,6 +513,9 @@
   "CDLKICKINGBYLENGTH": {
     "name": "Kicking - bull/bear determined by the longer marubozu",
     "enabled": true,
+    "signal": "",
+    "pattern": "",
+    "reliability": "",
     "info": [
       {
         "source": "",
@@ -423,6 +528,9 @@
   "CDLLADDERBOTTOM": {
     "name": "Ladder Bottom",
     "enabled": true,
+    "signal": "bullish",
+    "pattern": "reversal",
+    "reliability": "moderate",
     "info": [
       {
         "source": "quantshare",
@@ -435,6 +543,9 @@
   "CDLLONGLEGGEDDOJI": {
     "name": "Long Legged Doji",
     "enabled": true,
+    "signal": "bearish_and_bullish",
+    "pattern": "reversal",
+    "reliability": "medium",
     "info": [
       {
         "source": "quantshare",
@@ -447,6 +558,9 @@
   "CDLLONGLINE": {
     "name": "Long Line Candle",
     "enabled": true,
+    "signal": "indecision",
+    "pattern": "reversal",
+    "reliability": "low",
     "info": [
       {
         "source": "thinkorswim",
@@ -459,6 +573,9 @@
   "CDLMARUBOZU": {
     "name": "Marubozu",
     "enabled": true,
+    "signal": "bearish_and_bullish",
+    "pattern": "reversal/continuation",
+    "reliability": "low",
     "info": [
       {
         "source": "thinkorswim",
@@ -471,6 +588,9 @@
   "CDLMATCHINGLOW": {
     "name": "Matching Low",
     "enabled": true,
+    "signal": "bullish",
+    "pattern": "reversal",
+    "reliability": "high",
     "info": [
       {
         "source": "thinkorswim",
@@ -483,6 +603,9 @@
   "CDLMATHOLD": {
     "name": "Mat Hold",
     "enabled": true,
+    "signal": "bullish",
+    "pattern": "continuation",
+    "reliability": "high",
     "info": [
       {
         "source": "thinkorswim",
@@ -495,6 +618,9 @@
   "CDLMORNINGDOJISTAR": {
     "name": "Morning Doji Star",
     "enabled": true,
+    "signal": "bullish",
+    "pattern": "reversal",
+    "reliability": "high",
     "info": [
       {
         "source": "thinkorswim",
@@ -507,6 +633,9 @@
   "CDLMORNINGSTAR": {
     "name": "Morning Star",
     "enabled": true,
+    "signal": "bullish",
+    "pattern": "reversal",
+    "reliability": "high",
     "info": [
       {
         "source": "thinkorswim",
@@ -519,6 +648,9 @@
   "CDLONNECK": {
     "name": "On-Neck Pattern",
     "enabled": true,
+    "signal": "bearish",
+    "pattern": "continuation",
+    "reliability": "moderate",
     "info": [
       {
         "source": "thinkorswim",
@@ -531,6 +663,9 @@
   "CDLPIERCING": {
     "name": "Piercing Pattern",
     "enabled": true,
+    "signal": "bullish",
+    "pattern": "reversal",
+    "reliability": "moderate",
     "info": [
       {
         "source": "thinkorswim",
@@ -543,6 +678,9 @@
   "CDLRICKSHAWMAN": {
     "name": "Rickshaw Man",
     "enabled": true,
+    "signal": "indecision",
+    "pattern": "reversal",
+    "reliability": "medium",
     "info": [
       {
         "source": "quantshare",
@@ -555,6 +693,9 @@
   "CDLRISEFALL3METHODS": {
     "name": "Rising/Falling Three Methods",
     "enabled": true,
+    "signal": "bearish_and_bullish",
+    "pattern": "continuation",
+    "reliability": "high",
     "info": [
       {
         "source": "thinkorswim",
@@ -568,6 +709,9 @@
   "CDLSEPARATINGLINES": {
     "name": "Separating Lines",
     "enabled": true,
+    "signal": "bearish_and_bullish",
+    "pattern": "continuation",
+    "reliability": "low",
     "info": [
       {
         "source": "thinkorswim",
@@ -580,6 +724,9 @@
   "CDLSHOOTINGSTAR": {
     "name": "Shooting Star",
     "enabled": true,
+    "signal": "bearish",
+    "pattern": "reversal",
+    "reliability": "low/moderate",
     "info": [
       {
         "source": "thinkorswim",
@@ -592,6 +739,9 @@
   "CDLSHORTLINE": {
     "name": "Short Line Candle",
     "enabled": true,
+    "signal": "indecision",
+    "pattern": "reversal",
+    "reliability": "low",
     "info": [
       {
         "source": "quantshare",
@@ -604,6 +754,9 @@
   "CDLSPINNINGTOP": {
     "name": "Spinning Top",
     "enabled": true,
+    "signal": "bearish_and_bullish",
+    "pattern": "reversal/continuation",
+    "reliability": "low",
     "info": [
       {
         "source": "quantshare",
@@ -616,6 +769,9 @@
   "CDLSTALLEDPATTERN": {
     "name": "Stalled Pattern",
     "enabled": true,
+    "signal": "bearish",
+    "pattern": "reversal",
+    "reliability": "medium",
     "info": [
       {
         "source": "quantshare",
@@ -628,6 +784,9 @@
   "CDLSTICKSANDWICH": {
     "name": "Stick Sandwich",
     "enabled": true,
+    "signal": "bullish",
+    "pattern": "reversal",
+    "reliability": "medium",
     "info": [
       {
         "source": "thinkorswim",
@@ -640,6 +799,9 @@
   "CDLTAKURI": {
     "name": "Takuri (Dragonfly Doji with very long lower shadow)",
     "enabled": true,
+    "signal": "",
+    "pattern": "",
+    "reliability": "",
     "info": [
       {
         "source": "",
@@ -652,6 +814,9 @@
   "CDLTASUKIGAP": {
     "name": "Tasuki Gap",
     "enabled": true,
+    "signal": "bearish_and_bullish",
+    "pattern": "continuation",
+    "reliability": "moderate",
     "info": [
       {
         "source": "quantshare",
@@ -664,6 +829,9 @@
   "CDLTHRUSTING": {
     "name": "Thrusting Pattern",
     "enabled": true,
+    "signal": "bearish",
+    "pattern": "continuation",
+    "reliability": "low",
     "info": [
       {
         "source": "thinkorswim",
@@ -676,6 +844,9 @@
   "CDLTRISTAR": {
     "name": "Tristar Pattern",
     "enabled": true,
+    "signal": "",
+    "pattern": "",
+    "reliability": "",
     "info": [
       {
         "source": "",
@@ -688,6 +859,9 @@
   "CDLUNIQUE3RIVER": {
     "name": "Unique 3 River",
     "enabled": true,
+    "signal": "bullish",
+    "pattern": "reversal",
+    "reliability": "moderate",
     "info": [
       {
         "source": "quantshare",
@@ -700,6 +874,9 @@
   "CDLUPSIDEGAP2CROWS": {
     "name": "Upside Gap Two Crows",
     "enabled": true,
+    "signal": "bearish",
+    "pattern": "reversal",
+    "reliability": "high",
     "info": [
       {
         "source": "quantshare",
@@ -712,11 +889,29 @@
   "CDLXSIDEGAP3METHODS": {
     "name": "Upside/Downside Gap Three Methods",
     "enabled": true,
+    "signal": "bearish_and_bullish",
+    "pattern": "continuation",
+    "reliability": "moderate",
     "info": [
       {
         "source": "thinkorswim",
         "content": [
           {"type": "bullish", "url": "https://tlc.thinkorswim.com/center/reference/Patterns/candlestick-patterns-library/bullish-only/UpsideGapThreeMethods"}
+        ]
+      }
+    ]
+  },
+  "CDLDRAGONFLYDOJI": {
+    "name": "Upside/Downside Gap Three Methods",
+    "enabled": true,
+    "signal": "bearish_and_bullish",
+    "pattern": "reversal",
+    "reliability": "low/moderate",
+    "info": [
+      {
+        "source": "quantshare",
+        "content": [
+          {"type": "bearish_and_bullish", "url": "https://www.quantshare.com/index.php?option=manual&dir=/QuantShare%20Language/Candlestick%20Pattern/CdlDragonflydoji%201.html"}
         ]
       }
     ]
