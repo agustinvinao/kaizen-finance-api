@@ -1,0 +1,60 @@
+//@version=5
+indicator('Testing', overlay=true)
+prd1 = input.int(defval=30, title='ZigZag Period', minval=2)
+upcol1 = color.lime
+dncol1 = color.red
+txtcol = color.black
+zz1width = 1
+
+float ph1 = ta.highestbars(high, prd1) == 0 ? high : na
+float pl1 = ta.lowestbars(low, prd1) == 0 ? low : na
+
+var dir1 = 0
+iff_1 = pl1 and na(ph1) ? -1 : dir1
+dir1 := ph1 and na(pl1) ? 1 : iff_1
+
+var max_array_size = 10  // [5, 2] matrix
+var zigzag1 = array.new_float(0)
+oldzigzag1 = array.copy(zigzag1)
+
+add_to_zigzag(pointer, value, bindex) =>
+    array.unshift(pointer, bindex)
+    array.unshift(pointer, value)
+    if array.size(pointer) > max_array_size
+        array.pop(pointer)
+        array.pop(pointer)
+
+update_zigzag(pointer, value, bindex, dir) =>
+    if array.size(pointer) == 0
+        add_to_zigzag(pointer, value, bindex)
+    else
+        if dir == 1 and value > array.get(pointer, 0) or dir == -1 and value < array.get(pointer, 0)
+            array.set(pointer, 0, value)
+            array.set(pointer, 1, bindex)
+        0.
+dir1changed = ta.change(dir1)
+if ph1 or pl1
+    if dir1changed
+        add_to_zigzag(zigzag1, dir1 == 1 ? ph1 : pl1, bar_index)
+    else
+        update_zigzag(zigzag1, dir1 == 1 ? ph1 : pl1, bar_index, dir1)
+
+if array.size(zigzag1) >= 6
+    var line zzline1 = na
+    var label zzlabel1 = na
+    if array.get(zigzag1, 0) != array.get(oldzigzag1, 0) or array.get(zigzag1, 1) != array.get(oldzigzag1, 1)
+        if array.get(zigzag1, 2) == array.get(oldzigzag1, 2) and array.get(zigzag1, 3) == array.get(oldzigzag1, 3)
+            line.delete(zzline1)
+            label.delete(zzlabel1)
+        zzline1 := line.new(x1=math.round(array.get(zigzag1, 1)), y1=array.get(zigzag1, 0), x2=math.round(array.get(zigzag1, 3)), y2=array.get(zigzag1, 2), color=dir1 == 1 ? upcol1 : dncol1, width=zz1width)
+        zzline1
+        hhlltxt = dir1 == 1 ? array.get(zigzag1, 0) > array.get(zigzag1, 4) ? 'HH' : 'LH' : array.get(zigzag1, 0) < array.get(zigzag1, 4) ? 'LL' : 'HL'
+        labelcol = dir1 == 1 ? array.get(zigzag1, 0) > array.get(zigzag1, 4) ? upcol1 : dncol1 : array.get(zigzag1, 0) < array.get(zigzag1, 4) ? dncol1 : upcol1
+        zzlabel1 := label.new(x=math.round(array.get(zigzag1, 1)), y=array.get(zigzag1, 0), text=hhlltxt, color=labelcol, textcolor=txtcol, style=dir1 == 1 ? label.style_label_down : label.style_label_up)
+        zzlabel1
+
+
+alertcondition( dir1 == 1 and array.get(zigzag1, 0) > array.get(zigzag1, 4), title='HH', message='HH')
+alertcondition( dir1 == 1 and array.get(zigzag1, 0) < array.get(zigzag1, 4), title='HL', message='HL')
+alertcondition( dir1 != 1 and array.get(zigzag1, 0) < array.get(zigzag1, 4), title='LL', message='LL')
+alertcondition( dir1 != 1 and array.get(zigzag1, 0) > array.get(zigzag1, 4), title='LH', message='LH')

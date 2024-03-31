@@ -1,0 +1,37 @@
+// This Pine Script™ code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © agustinvinao
+
+//@version=5
+indicator("AV Pivot Predictor Open", shorttitle="AV PPredictOpen", overlay=true)
+
+timeframe = input.timeframe("W", title="Time Frame")
+open_color = input.color(color.lime, title="Open")
+support_1_color = input.color(color.blue, title="Support 1")
+support_2_color = input.color(color.navy, title="Support 2")
+resistance_1_color = input.color(color.orange, title="Resistance 1")
+resistance_2_color = input.color(color.red, title="Resistance 2")
+
+[prevHigh,prevLow,prevClose] = request.security(syminfo.tickerid,timeframe, [high,low,close])
+newDay = ta.change(time(timeframe))
+var line openLine = na
+var line support1Line = na
+var line support2Line = na
+var line resistance1Line = na
+var line resistance2Line = na
+if newDay
+    pivotPoint      = (open + prevHigh + prevLow + prevClose) / 4
+    support1        = (pivotPoint * 2) - prevHigh
+    support2        = pivotPoint - (prevHigh - prevLow)
+    resistance1     = (pivotPoint * 2) - prevLow
+    resistance2     = pivotPoint + (prevHigh - prevLow)
+    openLine        := line.new(bar_index, open, bar_index+1, open, color = open_color)
+    resistance1Line := line.new(bar_index, resistance1, bar_index+1, resistance1, color = support_1_color)
+    resistance2Line := line.new(bar_index, resistance2, bar_index+1, resistance2, color = support_2_color)
+    support1Line    := line.new(bar_index, support1, bar_index+1, support1, color = resistance_1_color)
+    support2Line    := line.new(bar_index, support2, bar_index+1, support2, color = resistance_2_color)
+    
+openLine.set_x2(bar_index)
+support1Line.set_x2(bar_index)
+support2Line.set_x2(bar_index)
+resistance1Line.set_x2(bar_index)
+resistance2Line.set_x2(bar_index)

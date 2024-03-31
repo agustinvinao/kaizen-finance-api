@@ -1,0 +1,63 @@
+// This Pine Script™ code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © agustinvinao
+
+//@version=5
+indicator('AV Camarilla Pivots Points', shorttitle = 'AV Camarilla PP', overlay = true)
+
+timeframe_resolution = input.timeframe('W', title='Timeframe')
+open_color = input.color(color.lime, title="Open")
+support_color = input.color(color.blue, title="Support Color")
+resistance_color = input.color(color.red, title="Resistance Color")
+
+
+[prevHigh,prevLow,prevClose] = request.security(syminfo.tickerid, timeframe_resolution, [high,low,close])
+newDay = ta.change(time(timeframe_resolution))
+var line openLine = na
+var line lineS1 = na
+var line lineS2 = na
+var line lineS3 = na
+var line lineS4 = na
+var line lineS5 = na
+var line lineR1 = na
+var line lineR2 = na
+var line lineR3 = na
+var line lineR4 = na
+var line lineR5 = na
+
+if newDay
+    prevRange = prevHigh - prevLow
+    pivotPoint = (prevHigh + prevLow + prevClose) / 3
+    r1 = prevClose + prevRange * (1.1 / 12)
+    r2 = prevClose + prevRange * (1.1 / 6)
+    r3 = prevClose + prevRange * (1.1 / 4)
+    r4 = prevClose + prevRange * (1.1 / 2)
+    r5 = (prevHigh / prevLow) * prevClose
+    s1 = prevClose - prevRange * (1.1 / 12)
+    s2 = prevClose - prevRange * (1.1 / 6)
+    s3 = prevClose - prevRange * (1.1 / 4)
+    s4 = prevClose - prevRange * (1.1 / 2)
+    s5 = prevClose - (r5 - prevClose)
+
+    openLine := line.new(bar_index, open, bar_index+1, open, color = open_color)
+    lineR1 := line.new(bar_index, r1, bar_index+1, r1, color = resistance_color)
+    lineR2 := line.new(bar_index, r2, bar_index+1, r2, color = resistance_color)
+    lineR3 := line.new(bar_index, r3, bar_index+1, r3, color = resistance_color)
+    lineR4 := line.new(bar_index, r4, bar_index+1, r4, color = resistance_color)
+    lineR5 := line.new(bar_index, r5, bar_index+1, r5, color = resistance_color)
+    lineS1 := line.new(bar_index, s1, bar_index+1, s1, color = support_color)
+    lineS2 := line.new(bar_index, s2, bar_index+1, s2, color = support_color)
+    lineS3 := line.new(bar_index, s3, bar_index+1, s3, color = support_color)
+    lineS4 := line.new(bar_index, s4, bar_index+1, s4, color = support_color)
+    lineS5 := line.new(bar_index, s5, bar_index+1, s5, color = support_color)
+
+openLine.set_x2(bar_index)
+lineS1.set_x2(bar_index)
+lineS2.set_x2(bar_index)
+lineS3.set_x2(bar_index)
+lineS4.set_x2(bar_index)
+lineS5.set_x2(bar_index)
+lineR1.set_x2(bar_index)
+lineR2.set_x2(bar_index)
+lineR3.set_x2(bar_index)
+lineR4.set_x2(bar_index)
+lineR5.set_x2(bar_index)

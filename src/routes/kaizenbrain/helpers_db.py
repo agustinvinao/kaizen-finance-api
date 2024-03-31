@@ -18,18 +18,37 @@ def get_engine():
 
 def insert_on_conflict_nothing_securities(table, conn, keys, data_iter):
     data = [dict(zip(keys, row)) for row in data_iter]
-    stmt = insert(table.table).values(data).on_conflict_do_nothing(index_elements=["symbol"])
+    stmt = insert(table.table).values(data).on_conflict_do_nothing(
+        index_elements=["symbol"]
+    )
     result = conn.execute(stmt)
     return result.rowcount
 
 def insert_on_conflict_nothing_transactions(table, conn, keys, data_iter):
     data = [dict(zip(keys, row)) for row in data_iter]
-    stmt = insert(table.table).values(data).on_conflict_do_nothing(index_elements=["id"])
+    stmt = insert(table.table).values(data).on_conflict_do_nothing(
+        index_elements=["id"]
+    )
     result = conn.execute(stmt)
     return result.rowcount
 
 def insert_on_conflict_nothing_ticks(table, conn, keys, data_iter):
     data = [dict(zip(keys, row)) for row in data_iter]
-    stmt = insert(table.table).values(data).on_conflict_do_nothing(index_elements=["symbol","dt"])
+    stmt = insert(table.table).values(data).on_conflict_do_nothing(
+        index_elements=["symbol","dt"]
+    )
     result = conn.execute(stmt)
     return result.rowcount
+
+def postgres_upsert(table, conn, keys, data_iter):
+    from sqlalchemy.dialects.postgresql import insert
+
+    data = [dict(zip(keys, row)) for row in data_iter]
+
+    insert_statement = insert(table.table).values(data)
+    upsert_statement = insert_statement.on_conflict_do_update(
+        constraint=f"{table.table.name}_pkey",
+        set_={c.key: c for c in insert_statement.excluded},
+    )
+    conn.execute(upsert_statement)
+    
