@@ -8,13 +8,13 @@ SELECT
 	p.shares * (ticks_1d_ago.close - p.quote_last_quote) AS profits_last_day,
 	p.quote_last_quote/ticks_1d_ago.close - 1 AS profits_last_day_perc,
 	p.amount/p_tot.total AS participation
-FROM securities s
-	INNER JOIN positions p ON s.symbol = p.symbol
+FROM assets a
+	INNER JOIN positions p ON a.symbol = p.symbol
 	INNER JOIN LATERAL (
-			SELECT close, bucket FROM ticks_1d t1d
-				WHERE p.symbol = t1d.symbol  AND t1d.bucket < CURRENT_DATE
-				ORDER BY bucket DESC LIMIT 1
+			SELECT close, dt FROM ticks_1d t1d
+				WHERE p.symbol = t1d.symbol  AND t1d.dt < CURRENT_DATE
+				ORDER BY dt DESC LIMIT 1
 		) AS ticks_1d_ago ON true
 	JOIN LATERAL (SELECT SUM(amount) AS total FROM positions) AS p_tot ON true
-WHERE s.category = 'stock' AND p.shares > 0
+WHERE a.category = 'stock' AND p.shares > 0
 ORDER BY (p.quote_last_quote/ticks_1d_ago.close - 1)

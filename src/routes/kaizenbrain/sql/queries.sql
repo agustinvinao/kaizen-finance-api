@@ -229,3 +229,72 @@ ORDER BY symbol, top DESC
 
 
 -- 	FIRST_VALUE(dt) OVER(PARTITION BY symbol, grp ORDER BY symbol, dt)
+
+
+
+WITH pivots AS (
+	SELECT t1d.symbol, t1d.dt::date AS dt, t1d.open, t1d.high, t1d.low, t1d.close, t1d.volume,
+		    CASE 
+		    		WHEN 	MAX(t1d.high) OVER(PARTITION BY symbol ORDER BY dt::DATE DESC ROWS BETWEEN 11 PRECEDING AND 11 FOLLOWING) = t1d.high THEN 'DOWN'
+ 		    				-- AND count(t1d.dt) OVER(PARTITION BY symbol ORDER BY dt::DATE DESC ROWS BETWEEN 11 PRECEDING AND 11 FOLLOWING) = 23 THEN 'UP'
+		    		WHEN 	MIN(t1d.low) OVER(PARTITION BY symbol ORDER BY dt::DATE DESC ROWS BETWEEN 11 PRECEDING AND 11 FOLLOWING) = t1d.low THEN 'UP'
+ 		    				-- AND count(t1d.dt) OVER(PARTITION BY symbol ORDER BY dt::DATE DESC ROWS BETWEEN 11 PRECEDING AND 11 FOLLOWING) = 23 THEN 'DOWN'
+		    	ELSE NULL END AS pivot
+	FROM ticks_1d t1d ORDER BY symbol, dt::date DESC
+), pivots_grps AS (
+	SELECT p.*, SUM(CASE WHEN p.pivot = 'UP' OR p.pivot = 'DOWN' THEN 1 ELSE 0 END) over (PARTITION BY p.symbol ORDER BY p.dt DESC) AS grp
+	FROM ticks_1d tt1d INNER JOIN pivots p ON tt1d.symbol = p.symbol AND tt1d.dt::DATE = p.dt
+), pivots_grps_count AS (
+	SELECT p.symbol, pg.grp, count(p.dt) as cnt FROM pivots p INNER JOIN pivots_grps pg ON p.symbol = pg.symbol AND p.dt = pg.dt
+	GROUP BY p.symbol, pg.grp ORDER BY p.symbol
+), pivot_dists as (
+	SELECT 	pg.*,
+			CASE WHEN pivot IS NULL THEN pgc.cnt - (row_number() over (PARTITION BY pg.symbol, pg.grp ORDER BY pg.symbol, pg.dt DESC) - 1)
+			ELSE 0 END AS pivot_dist
+	FROM pivots_grps pg JOIN pivots_grps_count pgc ON pg.symbol = pgc.symbol AND pg.grp = pgc.grp
+	ORDER BY symbol, dt DESC, grp
+), hh_ll AS (
+	SELECT 	pd.*,
+			CASE 
+				WHEN MAX(high) OVER(PARTITION BY symbol ORDER BY dt::DATE DESC ROWS BETWEEN 11 PRECEDING AND 11 FOLLOWING) = high
+				THEN high
+			ELSE NULL END AS hb,
+			CASE 
+				WHEN MIN(low) OVER(PARTITION BY symbol ORDER BY dt::DATE DESC ROWS BETWEEN 11 PRECEDING AND 11 FOLLOWING) = low
+				THEN low
+			ELSE NULL END AS lb
+	FROM pivot_dists pd
+	ORDER BY symbol, dt DESC, grp)
+
+-- ph and na(pl) ? 1 : pl and na(ph) ? -1 : dir
+select hl.*,
+	CASE
+		WHEN hl.hb IS NOT NULL AND hl.lb IS NULL THEN 1
+		WHEN hl.lb IS NOT NULL AND hl.hb IS NULL THEN -1
+	END as dir
+from hh_ll hl
+WHERE symbol IN ('AAPL', 'AAOI')
+ORDER BY symbol, dt desc;
+
+-- DROP MATERIALIZED VIEW pivots_ticks_1d;
+
+-- CREATE UNIQUE INDEX pivots_ticks_1d_symbol_dt ON pivots_ticks_1d (symbol, dt);
+
+
+-- CREATE MATERIALIZED VIEW phases_ticks_1d AS
+-- WITH edges AS (
+-- 	SELECT symbol, dir, grp, MAX(dt) AS top
+-- 	FROM pivots_ticks_1d
+-- 	GROUP BY symbol, dir, grp ORDER by symbol, grp)
+
+-- SELECT
+-- 	ef.symbol,
+-- 	ef.dir,
+-- 	ef.grp,
+-- 	ef.top as floor,
+-- 	lag(ef.top, 1) OVER(PARTITION BY symbol ORDER BY symbol, grp ) as top
+-- FROM edges ef
+-- WHERE symbol = 'AAPL'
+
+-- -- CREATE INDEX phases_ticks_1d_symbol_dir ON pivots_ticks_1d (symbol, dir)
+-- -- DROP MATERIALIZED VIEW phases_ticks_1d;

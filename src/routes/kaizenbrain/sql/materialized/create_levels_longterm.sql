@@ -1,6 +1,6 @@
 CREATE MATERIALIZED VIEW levels_longterm AS
-	WITH beginning AS (SELECT  t1w.* FROM longterm_boundaries ll INNER JOIN ticks_1w t1w ON ll.symbol = t1w.symbol AND t1w.bucket::DATE = date_trunc('week', ll.start_at)),
-		 ending AS (SELECT  t1w.* FROM longterm_boundaries ll INNER JOIN ticks_1w t1w ON ll.symbol = t1w.symbol AND t1w.bucket::DATE = date_trunc('week', ll.end_at)),
+	WITH beginning AS (SELECT  t.* FROM longterm_boundaries ll INNER JOIN ticks_1w t ON ll.symbol = t.symbol AND date_trunc('week', t.dt) = date_trunc('week', ll.start_at)),
+		 ending AS (SELECT  t.* FROM longterm_boundaries ll INNER JOIN ticks_1w t ON ll.symbol = t.symbol AND date_trunc('week', t.dt) = date_trunc('week', ll.end_at)),
 		 boundaries AS (
 			SELECT ll.symbol,
 				CASE WHEN b.high > e.high THEN b.high WHEN b.high < e.high THEN e.high END AS top,

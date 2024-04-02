@@ -1,31 +1,39 @@
 CREATE MATERIALIZED VIEW pivots_ticks_1d AS
 WITH pivots AS (
-	SELECT t1d.symbol, t1d.dt::date AS dt, t1d.open, t1d.high, t1d.low, t1d.close, t1d.volume,
-		    CASE 
-		    		WHEN 	MAX(t1d.high) OVER(PARTITION BY symbol ORDER BY dt::DATE DESC ROWS BETWEEN 10 PRECEDING AND 10 FOLLOWING) = t1d.high AND
-		    				count(t1d.dt) OVER(PARTITION BY symbol ORDER BY dt::DATE DESC ROWS BETWEEN 10 PRECEDING AND 10 FOLLOWING) = 21				THEN 'UP'
-		    		WHEN 	MIN(t1d.low) OVER(PARTITION BY symbol ORDER BY dt::DATE DESC ROWS BETWEEN 10 PRECEDING AND 10 FOLLOWING) = t1d.low AND
-		    				count(t1d.dt) OVER(PARTITION BY symbol ORDER BY dt::DATE DESC ROWS BETWEEN 10 PRECEDING AND 10 FOLLOWING) = 21				THEN 'DOWN'
-		    	ELSE NULL END AS pivot
-	FROM ticks_1d t1d ORDER BY symbol, dt::date DESC
-), pivots_grps AS (
-	SELECT p.*, SUM(CASE WHEN p.pivot = 'UP' OR p.pivot = 'DOWN' THEN 1 ELSE 0 END) over (PARTITION BY p.symbol ORDER BY p.dt DESC) AS grp
-	FROM ticks_1d tt1d INNER JOIN pivots p ON tt1d.symbol = p.symbol AND tt1d.dt::DATE = p.dt
-), pivots_grps_count AS (
-	SELECT p.symbol, pg.grp, count(p.dt) as cnt FROM pivots p INNER JOIN pivots_grps pg ON p.symbol = pg.symbol AND p.dt = pg.dt
-	GROUP BY p.symbol, pg.grp ORDER BY p.symbol
-), pivot_dists as (
-	SELECT 	pg.*,
-			CASE WHEN pivot IS NULL THEN pgc.cnt - (row_number() over (PARTITION BY pg.symbol, pg.grp ORDER BY pg.symbol, pg.dt DESC) - 1)
-			ELSE 0 END AS pivot_dist
-	FROM pivots_grps pg JOIN pivots_grps_count pgc ON pg.symbol = pgc.symbol AND pg.grp = pgc.grp
-	ORDER BY symbol, dt DESC, grp
+	SELECT 	symbol, dt::date AS dt, high, low, open, close, volume,
+			CASE 
+		    	WHEN 	MAX(high) 	OVER(PARTITION BY symbol ORDER BY symbol, dt::DATE DESC ROWS BETWEEN 5 PRECEDING AND 5 FOLLOWING) = high THEN 'DOWN'
+		    	WHEN 	MIN(low) 	OVER(PARTITION BY symbol ORDER BY symbol, dt::DATE DESC ROWS BETWEEN 5 PRECEDING AND 5 FOLLOWING) = low THEN 'UP'
+		    ELSE NULL END AS pivot,
+		    max(high) OVER(PARTITION BY symbol ORDER BY symbol, dt::DATE DESC ROWS BETWEEN 1 PRECEDING AND 11 FOLLOWING) AS next_high,
+		    min(low) OVER(PARTITION BY symbol ORDER BY symbol, dt::DATE DESC ROWS BETWEEN 1 PRECEDING AND 11 FOLLOWING) AS next_low,
+		    CASE WHEN max(high) OVER(PARTITION BY symbol ORDER BY symbol, dt::DATE DESC ROWS BETWEEN 1 PRECEDING AND 11 FOLLOWING) = high THEN high ELSE NULL END AS ph,
+		    CASE WHEN min(low) OVER(PARTITION BY symbol ORDER BY symbol, dt::DATE DESC ROWS BETWEEN 1 PRECEDING AND 11 FOLLOWING) = low THEN low ELSE NULL END AS pl,
+		    CASE
+		    	WHEN
+		    		(CASE WHEN max(high) OVER(PARTITION BY symbol ORDER BY symbol, dt::DATE DESC ROWS BETWEEN 1 PRECEDING AND 11 FOLLOWING) = high THEN high ELSE NULL END) IS NOT NULL AND
+		    		(CASE WHEN min(low) OVER(PARTITION BY symbol ORDER BY symbol, dt::DATE DESC ROWS BETWEEN 1 PRECEDING AND 11 FOLLOWING) = low THEN low ELSE NULL END) IS NULL
+		    	THEN 1
+		    	WHEN
+		    		(CASE WHEN min(low) OVER(PARTITION BY symbol ORDER BY symbol, dt::DATE DESC ROWS BETWEEN 1 PRECEDING AND 11 FOLLOWING) = low THEN low ELSE NULL END) IS NOT NULL AND
+		    		(CASE WHEN max(high) OVER(PARTITION BY symbol ORDER BY symbol, dt::DATE DESC ROWS BETWEEN 1 PRECEDING AND 11 FOLLOWING) = high THEN high ELSE NULL END) IS NULL
+		    	THEN -1
+		    END as dir_flag
+	FROM ticks_1d t1d
+	ORDER BY symbol, dt::date DESC
 )
 
-SELECT 	pd.*,
-		FIRST_VALUE(pivot) over (partition by symbol, grp order by symbol, dt DESC ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS dir,
-		min(dt) over (partition by symbol, grp order by symbol, dt DESC ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS dt_min
-FROM pivot_dists pd ORDER BY symbol, dt DESC, grp;
+SELECT 	symbol, dt, high, low, open, close, volume, pivot, dir_flag,
+		COALESCE(dir_flag, values[array_upper(values, 1)]::int) AS direction,
+		CASE
+			WHEN LAG(COALESCE(dir_flag, values[array_upper(values, 1)]::int), 1)
+				 OVER (PARTITION BY symbol ORDER BY dt DESC) <> dir_flag
+			THEN 1 END as is_reset
+FROM (
+	SELECT *, array_agg(dir_flag) FILTER (WHERE dir_flag IS NOT NULL) OVER (PARTITION BY symbol ORDER BY symbol, dt DESC) AS values
+	FROM pivots
+) AS pd
+ORDER BY symbol DESC, dt DESC;
 
 
 CREATE UNIQUE INDEX pivots_ticks_1d_symbol_dt ON pivots_ticks_1d (symbol, dt);
