@@ -1,0 +1,40 @@
+@startuml
+
+state Cond <<choice>>
+state Cond1 <<choice>>
+state Cond2 <<choice>>
+
+state Entry
+state "New candle" as newCandle
+state "Phase Reversal" as PhaseReversal
+state "Price below min" as PriceBelowMin
+state "CrossUp" as CrossUp
+state "1st Pivot Down" as 1stPivot
+state "CrossUp => Pivot Down" as CrossUpBeforePivot
+state "Pivot Down => CrossUp " as CrossUpAfterPivot
+
+[*] --> newCandle
+newCandle --> Cond: No Fase\ndefined?
+
+Cond --> [*]: no
+Cond --> PhaseReversal: yes
+PhaseReversal --> PriceBelowMin
+PhaseReversal --> CrossUp
+PhaseReversal --> 1stPivot
+PriceBelowMin --> [*]
+
+CrossUp --> Cond1
+
+Cond1 --> CrossUpBeforePivot: CrossUp\nbefore\nPivot Down
+Cond1 --> CrossUpAfterPivot: CrossUp\nafter\nPivot Down
+
+1stPivot --> Cond2
+
+Cond2 --> CrossUpBeforePivot: CrossUp\nbefore\nPivot Down
+Cond2 --> CrossUpAfterPivot: CrossUp\nafter\nPivot Down
+
+CrossUpBeforePivot --> [*]: wait\n1st Pivot Down
+CrossUpAfterPivot --> Entry
+
+PhaseReversal : bear market
+@enduml

@@ -19,7 +19,7 @@ python3 src/app.py
 
 # envs
 
-https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/
+https://packaging.python.org/en/pylatest/guides/installing-using-pip-and-virtual-environments/
 
 ```python
 source .venv/bin/activate

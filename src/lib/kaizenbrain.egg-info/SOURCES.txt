@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+setup.py
+kaizenbrain.egg-info/PKG-INFO
+kaizenbrain.egg-info/SOURCES.txt
+kaizenbrain.egg-info/dependency_links.txt
+kaizenbrain.egg-info/top_level.txt

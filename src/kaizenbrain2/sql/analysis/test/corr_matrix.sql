@@ -1,0 +1,1 @@
+-- https://www.sqlservercentral.com/articles/a-stock-price-correlation-matrix
